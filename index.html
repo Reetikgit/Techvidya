@@ -324,6 +324,17 @@ fieldset[disabled] .btn-portfolio.active {
   
   
 }
+.ml15 {
+  font-weight: 800;
+  font-size: 3.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
 .modal-body img,.portfolio-item img
 {
   -webkit-transition: all 0.7s ease;
@@ -377,12 +388,20 @@ box-shadow: -2px 10px 49px 5px rgba(0,0,0,0.35);
 </nav>
 
 <div class="container-fluid">
-
 <div class="row">
 
 	<div id="heading" class="page-header">
 		<div id="title-sub-title">
-			
+			<h2 class="ml15">
+  <span class="word">Tech</span>
+  <span class="word">Vidya</span>
+  <span class="word">2K19</span>
+</h2>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+			<!-- <h2 class="ml3">Tech Vidya</h2>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
 		 <!-- <h1 style="font-size:8vw;" class="heading-title"> Techvidya</h1>
 			<h2 class="heading-sub-title">A technical vidya</h2>
 			 -->
@@ -390,9 +409,6 @@ box-shadow: -2px 10px 49px 5px rgba(0,0,0,0.35);
 		
 		<div class="text-center">
 			<a href="#about">
-				<h1 class="ml3">Tech Vidya</h1>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <span class="round-anchor fa-stack fa-3x">
   <i class="fa fa-circle-thin fa-stack-2x"></i>
   <i class="fa fa-angle-double-down fa-stack-1x"></i>
@@ -710,6 +726,21 @@ box-shadow: -2px 10px 49px 5px rgba(0,0,0,0.35);
     });
     });
     // Wrap every letter in a span
+    anime.timeline({loop: true})
+  .add({
+    targets: '.ml15 .word',
+    scale: [14,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 800,
+    delay: (el, i) => 800 * i
+  }).add({
+    targets: '.ml15',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 var textWrapper = document.querySelector('.ml3');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
