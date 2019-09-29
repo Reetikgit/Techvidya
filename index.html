@@ -788,6 +788,11 @@ h1.ml8 {
 
 </html>
 <script type="text/javascript">
+   $(window).resize(function() {
+     var wWidth = window.width,
+     wHeight = window.height;
+     window.resizeBy(wWidth, wHeight);
+ });
 	$( document ).ready(function() { 
     $('a').click(function(e){
       e.preventDefault();
