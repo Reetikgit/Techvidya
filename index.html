@@ -43,7 +43,7 @@
     padding-left: 15px !important;
     margin-right: auto !important;
     margin-left: auto !important;
-  	height:auto;
+  	height:46em;
   	width:100%;
 }
 .navbar-brand
@@ -74,8 +74,7 @@
 .container-fluid
 {
   padding:0px;
-
-  background-image:url("head4.jpg");
+/*background-image:url("head4.jpg");*/
   background: url("head4.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -86,7 +85,7 @@
 
 .page-header
 {
-  margin-top:20px;
+  top:10px;
   margin-bottom:0px;
   padding:100px 0px 64px 0px;
   color:#1D1F20;
@@ -813,11 +812,11 @@ h1.ml8 {
 anime.timeline({loop: true})
   .add({
     targets: '.ml8 .circle-white',
-    scale: [0, 3],
-    opacity: [1, 0],
+    scale: [0, 5],
+    opacity: [2, 0],
     easing: "easeInOutExpo",
     rotateZ: 360,
-    duration: 1100
+    duration: 1500
   }).add({
     targets: '.ml8 .circle-container',
     scale: [0, 1],
@@ -846,7 +845,7 @@ anime.timeline({loop: true})
     opacity: 0,
     duration: 1000,
     easing: "easeOutExpo",
-    delay: 1400
+    delay:100
   });
 
 anime({
