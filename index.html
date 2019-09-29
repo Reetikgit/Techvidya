@@ -430,26 +430,63 @@ h1.ml8 {
   height: 2em;
 }*/
 </style>
+  <nav class="navbar navbar-inverse navbar-default navbar-fixed-top ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse.hide">Sanchalana</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <ul class="nav navbar-nav">
+   
 
-<nav role="navigation" class="navbar  navbar-default navbar-fixed-top">
-	<!-- Brand and toggle get grouped for better mobile display -->
+          <li class="active"><a href="https://www.google.com/" data-target=".navbar-collapse.show">Home</a></li>
+          <li><a href="#section1" data-toggle="collapse" data-target=".navbar-collapse.show">Cultural Events</a></li>
+          <li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse.hide">Fun house</a></li>
+           <li><a href="dj.html">DJ Night</a></li>
+           <li><a href="signup.html">Register Online</a></li>
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">See Also <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#section4" data-target=".navbar-collapse.show">Theater Events</a></li>
+              <li><a href="#section3">Art Events</a></li>
+              
+              <li><a href="#section5">Literary Events</a></li>
+              <li><a href="#section52">Casual Events</a></li>
+              <li class="divider"></li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+
+
+<!-- <nav role="navigation" class="navbar  navbar-default navbar-fixed-top">
+	<!-- Brand and toggle get grouped for better mobile display 
 	<div id="nav-bar" class="navbar-header">
-		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" >
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span> 
 		</button>
-		<a target="_blank" href="http://www.medunes.net" class="navbar-brand">Attractions</a>
+		  <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse.hide">Attractions</a>
 	</div>
-	<!-- Collection of nav links and other content for toggling -->
-	<div id="navbarCollapse" class="collapse navbar-collapse">
+	<!-- Collection of nav links and other content for toggling 
+	<div id="navbarCollapse" class="collapse navbar-collapse" data-toggle="collapse" data-target=".navbar-collapse.show">
 		<ul class="nav navbar-nav">
-			<li><a href="#heading">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#portfolio">Competitions</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
+			<li><a href="#heading" data-toggle="collapse"  data-target=".navbar-collapse.show">Home</a></li>
+			<li><a href="#about" data-toggle="collapse"  data-target=".navbar-collapse.show">About</a></li>
+			<li><a href="#portfolio" data-toggle="collapse" data-target=".navbar-collapse.show">Competitions</a></li>
+			<li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li>
+		</ul> -->
 <!-- 		<ul class="nav navbar-nav navbar-right">
 			<li><a target="_blank" href="https://www.facebook.com/medunes.tn"><i class="fa fa-facebook"></i></a></li>
 			<li><a target="_blank" href="https://twitter.com/MedYOUNES_83"><i class="fa fa-twitter"></i></a></li>
@@ -788,7 +825,7 @@ h1.ml8 {
 
 </html>
 <script type="text/javascript">
-  
+
 	$( document ).ready(function() { 
     $('a').click(function(e){
       e.preventDefault();
