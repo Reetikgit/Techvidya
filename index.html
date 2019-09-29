@@ -445,10 +445,93 @@ h1.ml8 {
   width: 2em;
   height: 2em;
 }*/
-</style>
+.navbar {
+    min-height: 70px;
+}
 
-<nav role="navigation" class="navbar  navbar-default navbar-fixed-top">
-	<!-- Brand and toggle get grouped for better mobile display -->
+.navbar-nav > li > a {
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.nav hr {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .nav hr {
+        height: 0.4rem;
+        margin: 0;
+        background: white;
+        border: none;
+        transition: .3s ease-in-out;
+        display: block;        
+    }
+}
+
+/* All mozilla versions */
+@-moz-document url-prefix() { 
+  .nav hr {
+    float: left; 
+  }
+}
+
+/* 
+
+Everything below here is irrelevant 
+
+YOU DO NOT NEED THE BELOW CSS
+
+*/
+
+body {
+  background-color: #000;
+}
+
+.container {
+  padding:1em;
+}
+
+
+h1, h2, h3 {
+  font-weight: bold;
+  
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5); 
+}
+
+p {
+  color: #999;
+}
+ 
+a {
+  color: #28abe3;
+}
+
+li {
+  cursor: pointer;
+}
+
+a:hover {
+  color: white;
+  background-color: inherit !important;
+}
+</style>
+<div class="container text-center">
+    
+    <div class="col-md-6 col-md-offset-3">      
+      <!-- Hover Navigation -->
+      <ul class="nav navbar-nav">
+        <li><a> HOME</a></li>
+        <li><a> ABOUT</a></li>
+        <li><a href="#about">Competitions</a></li>
+        <li><a>More</a></li>
+        <li><a> CONTACT</a></li>
+        <hr id="nav_slide_hover"> 
+      </ul>
+    </div>
+  </div><!-- /.container -->   
+<!-- <nav role="navigation" class="navbar  navbar-default navbar-fixed-top">
+
 	<div id="nav-bar" class="navbar-header">
 		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" >
 			<span class="sr-only">Toggle navigation</span>
@@ -477,7 +560,7 @@ h1.ml8 {
 
     </ul> 
 	</div>
-</nav>
+</nav> -->
 
 <div class="container-fluid">
 <div class="row">
@@ -801,6 +884,77 @@ h1.ml8 {
 
 </html>
 <script type="text/javascript">
+
+// This is setup with bootstrap 3
+
+/**
+* If you have LESS than one navbar, then just do 
+* let menu = document.getElementsByClassName( 'nav' )[0];
+*/ 
+let menu = document.getElementsByClassName( 'nav' );
+// Values are set.
+if ( menu ) {
+  
+  // HOVER
+  let menu_slider_hover = document.getElementById( 'nav_slide_hover' );
+  if ( menu_slider_hover ) {
+    nav_slider( menu[0], function( el, width, tempMarginLeft ) {                          
+      el.onmouseover = () => {
+        menu_slider_hover.style.width =  width + '%';                    
+        menu_slider_hover.style.marginLeft = tempMarginLeft + '%';    
+      }
+    });
+  }
+
+  // CLICK
+  let menu_slider_click = document.getElementById( 'nav_slide_click' );
+  if ( menu_slider_click ) {
+    nav_slider( menu[1], function( el, width, tempMarginLeft ) {                          
+      el.onclick = () => {
+        menu_slider_click.style.width =  width + '%';                    
+        menu_slider_click.style.marginLeft = tempMarginLeft + '%';    
+      }
+    });
+  }
+ 
+} // endif
+
+function nav_slider( menu, callback ) {
+  let menu_width = menu.offsetWidth;
+  // We only want the <li> </li> tags
+  menu = menu.getElementsByTagName( 'li' );            
+  if ( menu.length > 0 ) {
+    var marginLeft = [];
+    // Loop through nav children i.e li
+    [].forEach.call( menu, ( el, index ) => {
+      // Dynamic width/margin calculation for hr              
+      var width = getPercentage( el.offsetWidth, menu_width );                              
+      var tempMarginLeft = 0;
+      // We don't want to modify first elements positioning
+      if ( index != 0 )  {
+        tempMarginLeft = getArraySum( marginLeft );
+      }            
+      // Set mouse event  hover/click
+      callback( el, width, tempMarginLeft );      
+      /* We store it in array because the later accumulated value is used for positioning */
+      marginLeft.push( width );
+    } );
+  }
+}
+
+// Might make this dynamic for px, %, pt, em 
+function getPercentage( min, max ) {
+  return min / max * 100;
+}
+
+// Not using reduce, because IE8 doesn't supprt it
+function getArraySum( arr ) {
+  let sum = 0;
+  [].forEach.call( arr, ( el, index ) => {
+    sum += el;
+  } );
+  return sum;
+}
 
 	$( document ).ready(function() { 
     $('a').click(function(e){
