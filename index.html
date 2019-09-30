@@ -139,7 +139,16 @@ h1 {
   transition: width 2s;
   overflow: hidden;
 }
-
+.navigation{
+   font-weight:900;
+  font-size:2em;
+  color: darkgray;
+  width: 10em;
+  height: 2em;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+  overflow: hidden;
+}
 h1:hover {
   width:60vw;
 }
@@ -614,7 +623,7 @@ h1.ml8 {
     height: auto;
     position: static;
     top: 0;
-    
+
   }
   #responsive-admin-menu #logo {
     display: none;
@@ -692,14 +701,17 @@ bottom: 0;
 
 z-index: 999999;
 }
+h2{
+  font-size:1.5em;
+}
 </style>
 
 <!-- Its a loader -->
 <!--CSS Spinner-->
-<div class="spinner-wrapper">
+<!-- <div class="spinner-wrapper">
 <div class="spinner"><h2 class="neon5">Loading..</h2></div>
-</div>
-<div class="se-pre-con"></div>
+</div> -->
+<!-- <div class="se-pre-con"></div>
 <div id="responsive-admin-menu">
   <div id="responsive-menu"><h2>Attractions</h2>
     <div class="menuicon">≡</div>
@@ -707,22 +719,22 @@ z-index: 999999;
   
   <div id="logo"></div>
 
-  <!--Menu-->
-  <div id="menu"><h2>QuickView</h2>
+  <!--Menu
+  <div id="menu"><h1 class="navigation">WhatsNew?</h1>
       <a href="" title="#"><i class="icon-dashboard"></i><span> 
       Dashboard</span></a>
       <a href="#about" title="#about"><i class="icon-bullhorn"></i><span> About</span></a>
       <a href="" title="Pages"><i class="icon-file-alt"></i><span>Competitions</span></a>
       <a href="" title="Media" class="submenu" name="media-sub"><i class="icon-eye-open"></i><span>  
       Media</span></a>
-      <!-- Media Sub Menu -->
+      <!-- Media Sub Menu -
         <div id="media-sub" style="display: none;">
           <a href="" title="Video Gallery"><i class="icon-film"></i><span>  
           Video Gallery</span></a>
           <a href="" title="Photo Gallery"><i class="icon-picture"></i><span>  
           Photo Gallery</span></a>
         </div>
-      <!-- Media Sub Menu -->
+      <!-- Media Sub Menu -
       
       <a href="" title="Graph &amp; Charts"><i class="icon-bar-chart"></i><span>  
       Graph &amp; Charts</span></a>
@@ -731,7 +743,7 @@ z-index: 999999;
 
       <a href="" class="submenu" name="other-sub" title="Other Contents"><i class="icon-book"></i><span> 
       Other Contents</span></a>
-      <!-- Other Contents Sub Menu -->
+      <!-- Other Contents Sub Menu -
         <div id="other-sub" style="display: none;">
           <a href="" title="Forms"><i class="icon-list"></i><span>  
           Forms</span></a>
@@ -740,32 +752,36 @@ z-index: 999999;
           <a href="" title="Maps"><i class="icon-map-marker"></i><span>  
           Maps</span></a>
         </div>
-      <!-- Other Contents Sub Menu -->
+      <!-- Other Contents Sub Menu -
       <a href="" title="Admin Tools"><i class="icon-cogs"></i><span>  
       Admin Tools</span></a>
   </div>
-  <!--Menu-->
+  <!--Menu-
 
 
-</div>
+</div> -->
 
 
 
 
-<!-- <nav role="navigation" class="navbar  navbar-default navbar-fixed-top">
+ <nav role="navigation" class="navbar  navbar-default navbar-fixed-top">
 
 	<div id="nav-bar" class="navbar-header">
-		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" >
+		<button type="button"  class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbarCollapse" data-targer="#navbar" aria-expanded="false" >
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span> 
 		</button>
-		  <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse.hide">Attractions</a>
+      <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse.hide">Attractions</a>
+      </div>
+      <div id="navbarCollapse" class="navbar-collapse collapse" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <ul class="nav navbar-nav">
+		 <!--  <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse.hide">Attractions</a>
 	</div>
 
 	<div id="navbarCollapse" class="collapse navbar-collapse" data-toggle="collapse" data-target=".navbar-collapse.show">
-		<ul class="nav navbar-nav">
+		<ul class="nav navbar-nav"> -->
 			<li><a href="#heading" data-toggle="collapse"  data-target=".navbar-collapse.show">Home</a></li>
 			<li><a href="#about" data-toggle="collapse"  data-target=".navbar-collapse.show">About</a></li>
 			<li><a href="#portfolio" data-toggle="collapse" data-target=".navbar-collapse.show">Competitions</a></li>
@@ -782,7 +798,7 @@ z-index: 999999;
 
     </ul> 
 	</div>
-</nav> -->
+</nav> 
 
 <div class="container-fluid">
 <div class="row">
@@ -1106,18 +1122,22 @@ z-index: 999999;
 
 </html>
 <script type="text/javascript">
-
-$(document).ready(function() {
-//Preloader
-$(window).on("load", function() {
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = $('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
-}
-hidePreloader();
+$('.navbar-nav li a').on('click', function(){
+    if(!$( this ).hasClass('dropdown-toggle')){
+        $('.navbar-collapse').collapse('hide');
+    }
 });
-});
+// $(document).ready(function() {
+// //Preloader
+// $(window).on("load", function() {
+// preloaderFadeOutTime = 500;
+// function hidePreloader() {
+// var preloader = $('.spinner-wrapper');
+// preloader.fadeOut(preloaderFadeOutTime);
+// }
+// hidePreloader();
+// });
+// });
 eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(o).i(4(){$("p").q(\'<r t="u" m="9/3-6-0.9"/>\');s a="";$("#3-0").c(4(){$("#3-6-0 #0").g()});$(h).f(4(){$("#3-6-0 #0").j("k")});$("#0 a.l").c(4(){d(a!=""){$("#"+a).n("a").e("7");$("#"+a).b("8")};d(a==$(1).5("2")){$("#"+$(1).5("2")).b("8");$(1).e("7");a=""}v{$("#"+$(1).5("2")).w("8");a=$(1).5("2");$(1).x("7")};y z})});',36,36,'menu|this|name|responsive|function|attr|admin|downarrow|fast|css||slideUp|click|if|removeClass|resize|slideToggle|window|ready|removeAttr|style|submenu|href|prev|document|head|append|link|var|rel|stylesheet|else|slideDown|addClass|return|false'.split('|'),0,{}))
 	$( document ).ready(function() { 
     $('a').click(function(e){
