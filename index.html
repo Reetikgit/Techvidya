@@ -663,7 +663,7 @@ h1.ml8 {
 .spinner {
   width:10em;
   height: 50px;
-  background-color:black;
+  background-color:green;
 position: relative;
 top:35%;
 left:38%;
@@ -708,9 +708,7 @@ h2{
 
 <!-- Its a loader -->
 <!--CSS Spinner-->
-<!-- <div class="spinner-wrapper">
-<div class="spinner"><h2 class="neon5">Loading..</h2></div>
-</div> -->
+ 
 <!-- <div class="se-pre-con"></div>
 <div id="responsive-admin-menu">
   <div id="responsive-menu"><h2>Attractions</h2>
@@ -719,7 +717,7 @@ h2{
   
   <div id="logo"></div>
 
-  <!--Menu
+
   <div id="menu"><h1 class="navigation">WhatsNew?</h1>
       <a href="" title="#"><i class="icon-dashboard"></i><span> 
       Dashboard</span></a>
@@ -783,6 +781,7 @@ h2{
 	<div id="navbarCollapse" class="collapse navbar-collapse" data-toggle="collapse" data-target=".navbar-collapse.show">
 		<ul class="nav navbar-nav"> -->
 			<li><a href="#heading" data-toggle="collapse"  data-target=".navbar-collapse.show">Home</a></li>
+     
 			<li><a href="#about" data-toggle="collapse"  data-target=".navbar-collapse.show">About</a></li>
 			<li><a href="#portfolio" data-toggle="collapse" data-target=".navbar-collapse.show">Competitions</a></li>
 			<li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li>
@@ -823,7 +822,7 @@ h2{
 			<h2 class="heading-sub-title">A technical vidya</h2>
 			 -->
 		</div>
-		
+		 <li><a href="registrationform.html">Register</a></li>
 		<div class="text-center">
 			<a href="#about">
 <span class="round-anchor fa-stack fa-3x">
@@ -1127,17 +1126,17 @@ $('.navbar-nav li a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     }
 });
-// $(document).ready(function() {
-// //Preloader
-// $(window).on("load", function() {
-// preloaderFadeOutTime = 500;
-// function hidePreloader() {
-// var preloader = $('.spinner-wrapper');
-// preloader.fadeOut(preloaderFadeOutTime);
-// }
-// hidePreloader();
-// });
-// });
+$(document).ready(function() {
+//Preloader
+$(window).on("load", function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+ hidePreloader();
+ });
+});
 eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(o).i(4(){$("p").q(\'<r t="u" m="9/3-6-0.9"/>\');s a="";$("#3-0").c(4(){$("#3-6-0 #0").g()});$(h).f(4(){$("#3-6-0 #0").j("k")});$("#0 a.l").c(4(){d(a!=""){$("#"+a).n("a").e("7");$("#"+a).b("8")};d(a==$(1).5("2")){$("#"+$(1).5("2")).b("8");$(1).e("7");a=""}v{$("#"+$(1).5("2")).w("8");a=$(1).5("2");$(1).x("7")};y z})});',36,36,'menu|this|name|responsive|function|attr|admin|downarrow|fast|css||slideUp|click|if|removeClass|resize|slideToggle|window|ready|removeAttr|style|submenu|href|prev|document|head|append|link|var|rel|stylesheet|else|slideDown|addClass|return|false'.split('|'),0,{}))
 	$( document ).ready(function() { 
     $('a').click(function(e){
