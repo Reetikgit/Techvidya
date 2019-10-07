@@ -40,7 +40,15 @@ h1 {
   padding: 10px;
   background: rgb(168, 240, 177);
   color: green;
-  margin-bottom: 10px;
+  /*margin-bottom: 50px;*/
+  display: none;
+}
+.alert2 {
+  text-align: center;
+  padding: 10px;
+  background: rgb(168, 240, 177);
+  color: green;
+  margin-bottom: 0px;
   display: none;
 }
 
@@ -129,7 +137,7 @@ button {
 
       <label class="" for="email">Email:</label>
       <input type="email" name="email" value="" id="email" required />
-      
+
       <label class="" for="name">Name:</label>
       <input type="text" name="name" value="" id="name" required />
 
@@ -171,7 +179,7 @@ button {
 
 
       <button type="submit" sendMessage()>Register</button>
-          <div class="alert">Registration Successfull</div>
+          <div class="alert2">Registration Successfull</div>
   </form>
 
   <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
@@ -203,6 +211,7 @@ document
 function formSubmit(e) {
   e.preventDefault();
   // Get Values from the DOM
+
   let name = document.querySelector('#name').value;
   let usn = document.querySelector('#usn').value;
   let email = document.querySelector('#email').value;
