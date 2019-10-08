@@ -199,7 +199,16 @@ font-family: 'Spectral', serif;
 overflow: hidden;
 }
 
-
+#portfolio
+{
+  background-color:#ddd;
+  background: url("head1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
+overflow: hidden;
+}
 
 .img-portfolio
 { 
@@ -715,6 +724,26 @@ z-index: 999999;
 h2{
   font-size:1.5em;
 }
+
+#cf {
+  position:relative;
+  height:10em;
+  width:25em;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
 </style>
 
 <!-- Its a loader -->
@@ -873,6 +902,10 @@ h2{
 		</div>
 	</div>	
 </div>	
+</h2>
+</div>
+</div>
+</div>
 
 <div id="portfolio" class="page-header">
 	<div id="title-sub-title">
@@ -884,17 +917,26 @@ h2{
 				<!-- Projects Row -->
 				<div class="row">
 					<div class="col-md-4 portfolio-item">
-						<a target="_blank"  href="http://www.mspro.tn">
-						<img class="img-responsive" src="game1.jpg" alt="MSP &copy web site..">
+						<a target="_blank"  href="http://www.mspro.tn"> 
+					<!-- 	<img class="img-responsive" src="game1.jpg" alt="MSP &copy web site.."> -->
+              <div id="cf">
+              <img class="bottom"  src="head1.jpg" />
+              <img class="top" src="game1.jpg" />
+              </div>
 						</a>
+
 						<h3>
 							<a target="_blank"  href="http://www.mspro.tn">Gaming</a>
 						</h3>
 						<p>A website I developed using Wordpress for MSP &copy, a software development company.</p>
 					</div>
+
 					<div class="col-md-4 portfolio-item">
 						<a target="_blank"  href="https://github.com/MedYOUNES/FCC-portfolio">
-							<img class="img-responsive" src="http://img11.hostingpics.net/pics/303983portfolio.png" alt="My Portfolio (freeCodeCamp)..">
+							<div id="cf">
+              <img class="bottom"  src="head1.jpg" />
+              <img class="top" src="game1.jpg" />
+              </div>
 						</a>
 						<h3>
 							<a target="_blank"  href="https://github.com/MedYOUNES/FCC-portfolio">My Portfolio (freeCodeCamp) </a>
@@ -911,8 +953,8 @@ h2{
 						<p>This is a Demo on how to use the <a target="_blank"  href="https://www.jqwidgets.com/"> JQWidgets </a><a target="_blank"  href="https://www.jqwidgets.com/jquery-widgets-demo/demos/jqxdataadapter/index.htm#demos/jqxdataadapter/defaultfunctionality.htm">DataAdapter</a> widget.</p>
 					</div>
 				</div>
-	
-				<div class="row">
+	<!-- 
+				<div class="row"> 
 					<div class="col-md-4 portfolio-item">
 						<a target="_blank"  href="https://github.com/MedYOUNES/java-world">
 							<img class="img-responsive" src="http://img11.hostingpics.net/pics/893086javalab.png" alt="Javascript World!..">
@@ -931,6 +973,7 @@ h2{
 						</h3>
 						<p>A notepad-like web application to easily summarize your readings, Created with CodeIgniter.</p>
 					</div>
+          
 					<div class="col-md-4 portfolio-item">
 						<a target="_blank"  href="https://github.com/MedYOUNES/Node.BS">
 							<img class="img-responsive"  src="http://img11.hostingpics.net/pics/227019nodebs.png" alt="Node.BS.">
@@ -940,10 +983,10 @@ h2{
 						</h3>
 						<p>An easy to implement BootStrap menu interface written in PHP.</p>
 					</div>
-				
+				</div> -->
 				<!-- Projects Row -->
 				
-				 <div class="row">
+				<!--  <div class="row">
 					<div class="col-md-4 portfolio-item col-md-offset-1">
 						<a target="_blank"  href="https://github.com/MedYOUNES/FCC-Tribute-Page">
 							<img class="img-responsive" src="http://img11.hostingpics.net/pics/174745tribute.png" alt="FCC-Tribute-Page..">
@@ -962,10 +1005,11 @@ h2{
 						</h3>
 						<p>						A simple C# application that transforms a comma seprated list to a vertical list, which you can sort, re-arrange by Drag/Drop,copy/paste, count the number of chars or words.</p>
 					</div>
-				</div><!-- /.row -->
+				</div>/.row
 			</div>
 		</div>
-	</div>	 </a></div>
+	</div>	 </a></div> -->
+</div></div>
 	<div id="contact" class="page-header">
 		<div id="title-sub-title">
 			<h1 class="heading-title">#contact</h1>
@@ -1102,6 +1146,13 @@ h2{
 
 </html>
 <script type="text/javascript">
+
+$(document).ready(function() {
+  $("#cf_onclick").click(function() {
+  $("#cf2 img.top").toggleClass("transparent");
+});
+});
+
 $('.element-to-hide').css('visibility', 'hidden');
 
 $('.navbar-nav li a').on('click', function(){
