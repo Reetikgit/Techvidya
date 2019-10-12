@@ -3,11 +3,13 @@
 <head>
     
 
-  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- <script type="text/javascript" src="engine1/jquery.js"></script> -->
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
@@ -66,7 +68,23 @@
               background: url(../images/clouds.jpg) no-repeat;
               background-size: cover;
           }
-
+ #video-viewport2 { position: absolute;  width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+    video {    display: block; width: 100%; height: auto; 
+               position:absolute;
+               top:50%;
+              left:50%;
+              min-width:100%;
+              min-height:100%;
+              width:auto;
+              height:auto;
+              z-index:-100;
+              -ms-transform: translateX(-50%) translateY(-50%);
+              -moz-transform: translateX(-50%) translateY(-50%);
+              -webkit-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+              background: url(../images/clouds.jpg) no-repeat;
+              background-size: cover;
+          }
     .fullsize-video-bg { height: 100%; overflow: hidden; }
 
     .fullsize-video-bg:before { content: ""; background: rgba(114,45,0,.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
@@ -85,7 +103,16 @@
     font-family: "Permanent Marker"; font-size:4em; font-style:italic; font-variant: normal;
      font-weight: 700; line-height: 26.4px; 
  }*/
+ .fullsize-video-bg2 { height: 100%; overflow: hidden; }
 
+    .fullsize-video-bg2:before { content: "";  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+    /*.fullsize-video-bg:after {
+     content: ""; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC); background-size: 3px 3px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; 
+    }*/
+
+
+    .fullsize-video-bg2 .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
+    .fullsize-video-bg2 .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
     h1
     {
   color: #fff;
@@ -99,21 +126,27 @@
   line-height: 1.1em;
  
     }
-    .section2{
+    #section2{
       background-color:white;
-      background:url("head5.jpg");
+      background:url("head6.jpg");
     }
+    #section3{
+      background-color:white;
+
+    }
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
     .about
     {
   color:black;
   font-weight:1000;
   text-align:left;
  
-  font-family:Permanent Marker, sans-serif;
-  text-transform: uppercase;
+font-family: "Permanent Marker";
+   font-size: 24px; font-style:normal;
+
   
   overflow: hidden;
-  font-size:2.5em;
+  font-size:5vw;
  
  
     }
@@ -127,10 +160,16 @@
     p{
 
     font-family: Permanent Marker, sans-serif;
-    text-transform: uppercase;
+    
     font-size:4vw;
     line-height: 1.1em;
 
+    }
+    .smallp{
+      font-family: cursive;
+      color:black;
+    font-size:2.5vw;
+    line-height: 1.1em;
     }
     h3{
       font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -148,7 +187,7 @@ a {
 /* header */
 
 .header {
-  background-color:rgba(10,5,0,0.2);
+  
   opacity:0.8;
   
   box-shadow: 1px 1px 4px 0 rgba(0,5,0,10);
@@ -163,8 +202,9 @@ a {
   list-style: none;
   overflow: hidden;
   color: white;
-  background-color:white;
-  background:transparent;
+  background-color:gray;
+background:transparent;
+  ;
 }
 
 .header li a {
@@ -197,6 +237,8 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
+  background-color:gray;
+
 }
 
 /* menu icon */
@@ -206,9 +248,10 @@ a {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 10px;
+  padding: 30px 10px;
   position: relative;
   user-select: none;
+
 }
 
 .header .menu-icon .navicon {
@@ -218,6 +261,7 @@ a {
   position: relative;
   transition: background .2s ease-out;
   width:24px;
+     background-color:gray;
 }
 
 .header .menu-icon .navicon:before,
@@ -229,14 +273,17 @@ a {
   position: absolute;
   transition: all .2s ease-out;
   width: 100%;
+  background-color:white;
 }
 
 .header .menu-icon .navicon:before {
   top: 5px;
+  background-color:white;
 }
 
 .header .menu-icon .navicon:after {
   top: -5px;
+  background-color:white;
 }
 
 /* menu btn */
@@ -383,6 +430,7 @@ button:hover
   font:2em;
   border-radius:10px;
   left:24%;
+ ;
   marquee {
     position: absolute;
     width: 90%;
@@ -619,7 +667,9 @@ overflow: hidden;
 
 
 
-
+.menu {
+  display: none;
+}
 </style>
 
 <header class="header">
@@ -629,11 +679,11 @@ overflow: hidden;
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
-    <li><a href="#work">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#careers">Registration</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#section2">About</a></li>
+    <li><a href="Events.html">Events</a></li>
     
-    <li><a href="#contact">contact</a></li>
+    <li><a href="#contact">Help</a></li>
   
     <li><a target="_blank" href="https://www.facebook.com/medunes.tn"><i class="fa fa-facebook"></i></a></li>
     <li><a target="_blank" href="https://twitter.com/MedYOUNES_83"><i class="fa fa-twitter"></i></a></li>
@@ -674,12 +724,14 @@ overflow: hidden;
       
         <!--  <img class="img-responsive img-center" src="poster1.jpeg"></img> -->
          
-
-            <h4><strong>Techvidya</strong> is our annual state level technical fest,it is festival organized to host events related to various technical aspects.It is a platform to showcase the practical talent in the field they've learnt.Each branch such as Electrical,civil,computer etc...have its own version of technical events testing the participants on knowledge and applications of that field.During which a student learns to innovate, organize and develop new things and comes across several experiences that leads to management and leadership.
-         </h4>
+        <div class="w3-row-padding">
+    <div class="w3-col s4">
+      <img src="icon2.png" style="width:100%">
+    </div>
+            <p class="smallp"><strong>Techvidya</strong> is our annual state level technical fest,it is festival organized to host events related to various technical aspects.It is a platform to showcase the practical talent in the field they've learnt.Each branch such as Electrical,civil,computer etc...
+         </p>
           <div class="item button-knowmore" style="--bg-color: #9b59b6;">
-            <button>Know More
-            </button></div>
+              <button class="w3-button w3-teal">Know more</button>
             </p>
         
             <ul>
@@ -694,13 +746,49 @@ overflow: hidden;
 
 </section>
 
+<div id="section3" data-aos="fade-down-right" class="page-header">
+  <h1 class="about">Register</h1>
 
+<div class="w3-container">
+  <p>The w3-row-padding class adds a 8px left and right padding to each column:</p>
+</div>
 
+  <div class="w3-row-padding">
+    <div class="w3-col s4">
+      <img src="head1.jpg" style="width:100%">
+    </div>
+    <div class="w3-col s4">
+      <img src="game1.jpg" style="width:100%">
+    </div>
+    <div class="w3-col s4">
+      <img src="img_snowtops.jpg" style="width:100%">
+    </div>
+  </div>
 
+        <!--  <img class="img-responsive img-center" src="poster1.jpeg"></img> -->
+         
+
+            </div></div></div>
+            </p>
+        
+            <ul>
+          <!--    <li>I played <strong>football(soccer)</strong> in <a href="http://www.eshs.tn/acceuil.php" target="_blank">ESHS</a>.</li>
+              <li>I also have a degree in <strong>Aïkido</strong> from the <a href="https://web.facebook.com/Aikido-Zanshin-Dojo-Mahdia-198711670225680" target="_blank">ZanShin Dojo</a>.</li> <li>I have been pratising <strong>Yoga,Tai-Chi</strong> since thirteen years.</li> -->
+   </ul>
 </section>
 </body>
 
 <script type="text/javascript">
+
+
+document.getElementById("myLink").click();
+   $( document ).ready(function() { 
+    $('a').click(function(e){
+      
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 800);
+});
     var min_w = 300;
 var vid_w_orig;
 var vid_h_orig;

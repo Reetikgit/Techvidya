@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<title>Events@Techvidya</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+body {
+ /* background:url("event1.jpg");*/
+ background:black;
+  font-family: "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {
+  padding: 16px;
+  font-weight: bold;
+}
+ h1
+    {
+  color:white;
+  text-align:center;
+ 
+  font-family: Permanent Marker, sans-serif;
+  text-transform: uppercase;
+  
+  overflow: hidden;
+  font-size:8vw;
+  line-height: 1.1em;
+ 
+    }
+    h2{
+      color: white;
+        font-size:1em;
+    }
+    .small
+    {
+      color:white;
+
+ 
+  font-family: Permanent Marker, sans-serif;
+  text-transform: uppercase;
+  
+  overflow: hidden;
+  font-size:1vw;
+  line-height: 1.1em;
+    }
+    .w3-sidebar{
+      background:url("head1.jpg");
+    }
+    .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+HTML CSSResult
+EDIT ON
+html {
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756);
+}
+
+h1 {
+  color: white;
+  padding-left: 10px;
+}
+
+#hover {
+  color: rgba(188, 175, 204, 0.9);
+}
+
+h2#testimonials {
+  color: #fffae3;
+}
+
+div#all {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* generic css */
+
+.view {
+  margin: 5px;
+  float: left;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+  background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+
+.view .mask,
+.view .content {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+.view img {
+  display: block;
+  position: relative
+}
+
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  font-family: Raleway, serif;
+  padding: 10px;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  margin: 20px 0 0 0
+}
+
+.view p {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+  padding: 0px 20px 0px;
+  text-align: center
+}
+
+.view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  font-family: Raleway, serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
+}
+
+.view a.info:hover {
+  box-shadow: 0 0 5px #000
+}
+
+
+/*1*/
+
+.view-first img {
+  /*1*/
+  transition: all 0.2s linear;
+  width: 300px;
+  height: 200px;
+}
+
+.view-first .mask {
+  opacity: 0;
+  background-color: rgba(58, 1, 132, 0.44);
+  transition: all 0.4s ease-in-out;
+}
+
+.view-first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  font-family: Raleway, serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* */
+
+.view-first:hover img {
+  transform: scale(1.1);
+}
+
+.view-first:hover .mask {
+  opacity: 1;
+}
+
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.view-first:hover p {
+  transition-delay: 0.1s;
+}
+
+.view-first:hover a.info {
+  transition-delay: 0.2s;
+}
+
+
+/*2*/
+
+.view-second img {
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.view-second .mask {
+  background-color: rgba(12, 19, 27, 0.6);
+  width: 300px;
+  padding: 105px;
+  height: 200px;
+  opacity: 0;
+  transform: translate(265px, 145px) rotate(45deg);
+  -webkit-transform: translate(265px, 145px) rotate(45deg);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.view-second h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: Raleway, serif;
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  -webkit-transform: translate(200px, -200px);
+  transform: translate(200px, -200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-second p {
+  transform: translate(-200px, 200px);
+  -webkit-transform: translate(200px, -200px);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.view-second a.info {
+  transform: translate(0px, 100px);
+  -webkit-transform: translate(0px, 100px);
+  transition: all 0.2s 0.1s ease-in-out;
+  -webkit-transition: all 0.2s 0.1s ease-in-out;
+}
+
+
+/* */
+
+.view-second:hover .mask {
+  opacity: 1;
+  transform: translate(-80px, -125px) rotate(45deg);
+  -webkit-transform: translate(-80px, -125px) rotate(45deg);
+}
+
+.view-second:hover h2 {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+}
+
+.view-second:hover p {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+}
+
+.view-second:hover a.info {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+}
+
+
+/*3*/
+
+.view-tenth img {
+  transform: scaleY(1);
+  transition: all .7s ease-in-out;
+}
+
+.view-tenth .mask {
+  background-color: rgba(255, 231, 179, 0.3);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-tenth h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: #333;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-tenth p {
+  color: #333;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+  padding-
+}
+
+.view-tenth a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-tenth:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-tenth:hover .mask {
+  opacity: 1;
+}
+
+.view-tenth:hover h2,
+.view-tenth:hover p,
+.view-tenth:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+
+Resources1×0.5×0.25×Rerun
+</style>
+<body>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="poster1.jpeg" style="width:80%;"></a>
+  <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+
+  <a class="w3-bar-item w3-button w3-teal" href="index.html">Home</a>
+  <h2 ><a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Common Events<i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-hide w3-blue">
+      <a class="w3-bar-item w3-button" href="#">Technical Paper Presentation</a>
+      <a class="w3-bar-item w3-button" href="#">IEEE Quiz</a>
+      <a class="w3-bar-item w3-button" href="#">Tech-o-Graphy</a>
+    </div></h2>
+   <h2> <a class="w3-bar-item w3-button" onclick="myAccordion('demo2')" href="javascript:void(0)">CSE/ISE<i class="fa fa-caret-down"></i></a>
+    <div id="demo2" class="w3-hide w3-khaki">
+      <a class="w3-bar-item w3-button w3-Indigo" href="#">Competativ Coding</a>
+      <a class="w3-bar-item w3-button" href="#">Gaming-PubG,Cs</a>
+      <a class="w3-bar-item w3-button" href="#">Cryptohunt</a>
+      <a class="w3-bar-item w3-button" href="#">SearchIt</a>
+      <a class="w3-bar-item w3-button" href="#">App Development</a>
+      <a class="w3-bar-item w3-button" href="#">Webathon</a>
+      <a class="w3-bar-item w3-button" href="#">Technical Quiz</a></h1>
+    </div>
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo3')" href="javascript:void(0)">ECE<i class="fa fa-caret-down"></i></a>
+    <div id="demo3" class="w3-hide w3-khaki">
+      <a class="w3-bar-item w3-button" href="#">Playtronics</a>
+      <a class="w3-bar-item w3-button" href="#">4 Pics 1 Word/a>
+      <a class="w3-bar-item w3-button" href="#">Technical Quiz</a>
+    </div>
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo6')" href="javascript:void(0)">MECHANICAL<i class="fa fa-caret-down"></i></a>
+    <div id="demo6" class="w3-hide w3-khaki">
+      <a class="w3-bar-item w3-button" href="#">Technical Quiz</a>
+      <a class="w3-bar-item w3-button" href="#">Tech CAED</a>
+      <a class="w3-bar-item w3-button" href="#">Mini Project</a>
+      <a class="w3-bar-item w3-button" href="#">Fast hands on lathe</a>
+    </div></h2>
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo4')" href="javascript:void(0)">CIVIL<i class="fa fa-caret-down"></i></a>
+    <div id="demo4" class="w3-hide w3-khaki">
+      <a class="w3-bar-item w3-button" href="#">Technical Quiz</a>
+      <a class="w3-bar-item w3-button" href="#">Thermocol Modelling</a>
+      <a class="w3-bar-item w3-button" href="#">Tech CADD</a>
+    </div>
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo5')" href="javascript:void(0)">EEE<i class="fa fa-caret-down"></i></a>
+    <div id="demo5" class="w3-hide w3-khaki">
+      <a class="w3-bar-item w3-button" href="#">TEK-Q</a>
+      <a class="w3-bar-item w3-button" href="#">Play-Trix</a>
+      <a class="w3-bar-item w3-button" href="#">Teknowatt</a>
+      <a class="w3-bar-item w3-button" href="#">Hunter's Quest</a>
+    </div></h2>
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">MBA<i class="fa fa-caret-down"></i></a>
+    <div id="demo" class="w3-hide w3-khaki">
+      <a class="w3-bar-item w3-button" href="#">Best Manager</a>
+      <a class="w3-bar-item w3-button" href="#">Business Quiz</a>
+      <a class="w3-bar-item w3-button" href="#">Spot Ads</a>
+    </div></h2></h2></h2></h2>
+
+
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+<div id="myTop" class="w3-container w3-top w3-theme w3-large w3-black">
+  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+  <span id="myIntro" class="w3-hide ">Events</span></p>
+</div>
+
+<header class="w3-container w3-ios-light-blue" style="padding:10px 20px">
+  <h1 >EVENTS</h1>
+</header>
+
+<div class="w3-container" style="padding:32px">
+
+  
+<div class="container">
+ <div class="w3-panel w3-black w3-padding-18 w3-card">
+
+
+<div id="all">
+  <div class="view view-first">
+    <img src="cs.jpg" />
+    <div class="mask">
+      <h2>CS/ISE</h2>
+      <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
+      <a href="#" class="info">Read More</a>
+    </div>
+    </div>
+     <div class="view view-first">
+    <img src="eee.jpg" />
+    <div class="mask">
+      <h2>EEE</h2>
+      <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
+      <a href="#" class="info">Read More</a>
+    </div>
+    </div>
+     <div class="view view-first">
+    <img src="mech.jpg" />
+    <div class="mask">
+      <h2>MECHANICAL</h2>
+      <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
+      <a href="#" class="info">Read More</a>
+    </div>
+    </div>
+  </div>
+   <div class="view view-first">
+    <img src="civil.jpg" />
+    <div class="mask">
+      <h2>CIVIL</h2>
+      <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
+      <a href="#" class="info">Read More</a>
+    </div>
+    </div>
+     <div class="view view-first">
+    <img src="ec.jpg" />
+    <div class="mask">
+      <h2>ECE</h2>
+      <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
+      <a href="#" class="info">Read More</a>
+    </div>
+    </div>
+     <div class="view view-first">
+    <img src="mba.jpg" />
+    <div class="mask">
+      <h2>MBA</h2>
+      <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
+      <a href="#" class="info">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!-- <div class="w3-container w3-padding-16 w3-card" style="background-color:#eee">
+<h3 class="w3-center">Blog Template</h3>
+<div class="w3-content" style="max-width:800px">
+<img src="img_temp_blog.jpg" style="width:98%;margin:20px 0" alt="Blog Template"><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a href="tryw3css_templates_blog.htm" target="_blank" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+  </div>
+  <div class="w3-col m6">
+    <a href="w3css_templates.asp" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">More Templates »</a>
+  </div>
+</div>
+</div>
+</div>
+
+</div> -->
+
+
+     
+</div>
+
+<script>
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+  } else {
+    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+  }
+}
+
+// Accordions
+function myAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme", "");
+  }
+}
+</script>
+     
+</body>
+</html> 
