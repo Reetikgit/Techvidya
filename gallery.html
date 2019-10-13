@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+.header {
+  
+  opacity:0.9;
+  
+  box-shadow: 1px 1px 4px 0 rgba(0,5,0,1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background:transparent;
+}
+ h1
+    {
+  color:black;
+  text-align:center;
+ 
+  font-family: Permanent Marker, sans-serif;
+  text-transform: uppercase;
+  
+  overflow: hidden;
+  font-size:7vw;
+  line-height: 1.1em;
+ 
+    }
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  color: white;
+ background:transparent;
+
+  ;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+    font-weight:900;
+    color:black;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color:#eee;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size:0.8em;
+  font-weight:800;
+  color:black;
+  padding:20px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height:0;
+  transition: max-height .2s ease-out;
+  background:transparent;
+
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 30px 10px;
+  position: relative;
+  user-select: none;
+
+}
+
+.header .menu-icon .navicon {
+  background:#999;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width:24px;
+     background-color:gray;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #999;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+  
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+
+
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height:500px;
+  background-color:#eee;
+  color:black;
+
+  text-decoration-color:black;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+</style>
+<body>
+
+<!-- Sidebar -->
+<!-- <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Events</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+  </div>
+</nav> -->
+<header class="header">
+  <a href="" class="logo">
+    Sai Vidya Institute Of Technology 
+  </a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#section2">About</a></li>
+
+    <li><a href="Events.html">Events</a></li> <li><a href="#section2">Tech Gallery</a></li>
+    <li><a href="#contact">Conatct</a></li>
+     
+  
+     <li><a target="_blank" href="https://www.facebook.com/medunes.tn"><i class="fa fa-facebook"></i></a></li>
+    <li><a target="_blank" href="https://twitter.com/MedYOUNES_83"><i class="fa fa-twitter"></i></a></li>
+    <li><a target="_blank" href="https://github.com/MedYOUNES"><i class="fa fa-github"></i></a></li>
+    <li><a target="_blank" href="https://plus.google.com/u/0/115878215693783014950"><i class="fa fa-google-plus"></i></a></li>
+                 
+
+    </ul> 
+</header>
+<br><br>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class=""></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>TECH GALLERY</b></h1>
+  <p><b>A tour to previous tech fests</b></p>
+  
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="head1.jpg" style="width:100%">
+    <img src="head2.jpg" style="width:100%">
+    <img src="head3.jpg" style="width:100%">
+    <img src="poster1.jpeg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="head5.jpg" style="width:100%">
+    <img src="head6.jpg" style="width:100%">
+    <img src="/w3images/notebook.jpg" style="width:100%">
+    <img src="/w3images/london.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/avatar_g.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="head1.jpg" style="width:100%">
+    <img src="head1.jpg" style="width:100%">
+    <img src="/w3images/gondol.jpg" style="width:100%">
+    <img src="/w3images/skies.jpg" style="width:100%">
+    <img src="/w3images/lights.jpg" style="width:100%">
+    <img src="/w3images/workshop.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+
+
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

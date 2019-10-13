@@ -36,6 +36,7 @@ body {
      
     }
     h2{
+      font-family:cursive;
       color: black;
         font-size:1em;
     }
@@ -372,15 +373,59 @@ div#all {
   transform: scale(1);
   opacity: 1;
 }
+.header {
+  
+  opacity:0.9;
+  
+  box-shadow: 1px 1px 4px 0 rgba(0,5,0,1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background:transparent;
+}
+ h1
+    {
+  color:black;
+  text-align:center;
+ 
+  font-family: Permanent Marker, sans-serif;
+  text-transform: uppercase;
+  
+  overflow: hidden;
+  font-size:7vw;
+  line-height: 1.1em;
+ 
+}
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
 
 </style>
 <body>
 
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
+<nav class="w3-sidebar  w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
   <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="icon2.png" style="width:80%;"></a>
-  <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+  <a class="w3-bar-item w3-button " href="javascript:void(0)" onclick="w3_close()"> <i class="fa fa-remove"></i></a>
 
   <a class="w3-bar-item w3-button w3-teal" href="index.html">Home</a>
+
+
+ 
   <h2 ><a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Common Events<i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-hide w3-blue">
       <a class="w3-bar-item w3-button" href="#">Technical Paper Presentation</a>
@@ -403,8 +448,8 @@ div#all {
       <a class="w3-bar-item w3-button" href="#">4 Pics 1 Word/a>
       <a class="w3-bar-item w3-button" href="#">Technical Quiz</a>
     </div>
-    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo6')" href="javascript:void(0)">MECHANICAL<i class="fa fa-caret-down"></i></a>
-    <div id="demo6" class="w3-hide w3-khaki">
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo7')" href="javascript:void(0)">MECHANICAL<i class="fa fa-caret-down"></i></a>
+    <div id="demo7" class="w3-hide w3-khaki">
       <a class="w3-bar-item w3-button" href="#">Technical Quiz</a>
       <a class="w3-bar-item w3-button" href="#">Tech CAED</a>
       <a class="w3-bar-item w3-button" href="#">Mini Project</a>
@@ -422,13 +467,16 @@ div#all {
       <a class="w3-bar-item w3-button" href="#">Play-Trix</a>
       <a class="w3-bar-item w3-button" href="#">Teknowatt</a>
       <a class="w3-bar-item w3-button" href="#">Hunter's Quest</a>
-    </div></h2>
-    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">MBA<i class="fa fa-caret-down"></i></a>
-    <div id="demo" class="w3-hide w3-khaki">
+    </div>
+    <h2><a class="w3-bar-item w3-button" onclick="myAccordion('demo8')" href="javascript:void(0)">MBA<i class="fa fa-caret-down"></i></a>
+    <div id="demo8" class="w3-hide w3-khaki">
       <a class="w3-bar-item w3-button" href="#">Best Manager</a>
       <a class="w3-bar-item w3-button" href="#">Business Quiz</a>
       <a class="w3-bar-item w3-button" href="#">Spot Ads</a>
-    </div></h2></h2></h2></h2>
+     
+    </div>
+   
+   </h2></h2></h2></h2>
 
 
 </nav>
