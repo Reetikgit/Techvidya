@@ -168,7 +168,7 @@ font-family: "Permanent Marker";
     .smallp{
       font-family: cursive;
       color:black;
-    font-size:2.5vw;
+    font-size:2.8vw;
     line-height: 1.1em;
     }
     h3{
@@ -188,12 +188,13 @@ a {
 
 .header {
   
-  opacity:0.8;
+  opacity:0.9;
   
-  box-shadow: 1px 1px 4px 0 rgba(0,5,0,10);
+  box-shadow: 1px 1px 4px 0 rgba(0,5,0,1);
   position: fixed;
   width: 100%;
   z-index: 3;
+  background:transparent;
 }
 
 .header ul {
@@ -202,8 +203,8 @@ a {
   list-style: none;
   overflow: hidden;
   color: white;
-  background-color:gray;
-background:transparent;
+ background:transparent;
+
   ;
 }
 
@@ -225,8 +226,8 @@ background:transparent;
   display: block;
   float: left;
   font-size:1em;
-  font-weight:700;
-  color:white;
+  font-weight:1000;
+  color:black;
   padding:20px 20px;
   text-decoration: none;
 }
@@ -235,9 +236,9 @@ background:transparent;
 
 .header .menu {
   clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-  background-color:gray;
+  max-height:0;
+  transition: max-height .4s ease-out;
+  background:transparent;
 
 }
 
@@ -283,7 +284,8 @@ background:transparent;
 
 .header .menu-icon .navicon:after {
   top: -5px;
-  background-color:white;
+
+
 }
 
 /* menu btn */
@@ -293,7 +295,11 @@ background:transparent;
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height:500px;
+  background-color:gray;
+  color:black;
+
+  text-decoration-color:black;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -681,15 +687,16 @@ overflow: hidden;
   <ul class="menu">
     <li><a href="#">Home</a></li>
     <li><a href="#section2">About</a></li>
-    <li><a href="Events.html">Events</a></li>
-    
-    <li><a href="#contact">Help</a></li>
+    <li><a href="#section2">Register</a></li>
+    <li><a href="Events.html">Events</a></li> <li><a href="#section2">Tech Gallery</a></li>
+    <li><a href="#contact">Conatct</a></li>
+     
   
-    <li><a target="_blank" href="https://www.facebook.com/medunes.tn"><i class="fa fa-facebook"></i></a></li>
+     <li><a target="_blank" href="https://www.facebook.com/medunes.tn"><i class="fa fa-facebook"></i></a></li>
     <li><a target="_blank" href="https://twitter.com/MedYOUNES_83"><i class="fa fa-twitter"></i></a></li>
     <li><a target="_blank" href="https://github.com/MedYOUNES"><i class="fa fa-github"></i></a></li>
     <li><a target="_blank" href="https://plus.google.com/u/0/115878215693783014950"><i class="fa fa-google-plus"></i></a></li>
-                
+                 
 
     </ul> 
 </header>
@@ -718,11 +725,11 @@ overflow: hidden;
 <section class="section2">
 <div id="section2" data-aos="fade-down-right" class="page-header">
   <h1 class="about">About</h1>
-    <div class="row">
+   <!--  <div class="row">
 
       <div class="col-xs-8 col-xs-offset-2 content">
       
-        <!--  <img class="img-responsive img-center" src="poster1.jpeg"></img> -->
+       
          
         <div class="w3-row-padding">
     <div class="w3-col s4">
@@ -735,15 +742,29 @@ overflow: hidden;
             </p>
         
             <ul>
-          <!--    <li>I played <strong>football(soccer)</strong> in <a href="http://www.eshs.tn/acceuil.php" target="_blank">ESHS</a>.</li>
-              <li>I also have a degree in <strong>Aïkido</strong> from the <a href="https://web.facebook.com/Aikido-Zanshin-Dojo-Mahdia-198711670225680" target="_blank">ZanShin Dojo</a>.</li> <li>I have been pratising <strong>Yoga,Tai-Chi</strong> since thirteen years.</li> -->
+         
             </ul>
           </li>
         </ul>
       </div>
     </div>
- </div>
-
+ </div> -->
+<div class="w3-container w3-padding-16 w3-card" style="">
+<h3 class="w3-center">Blog Template</h3>
+<div class="w3-content" style="max-width:800px">
+<img src="icon2.png" style="width:50%;margin:20px 0" alt="Blog Template"><br>
+<div class="w3-row">
+  
+   <p class="smallp"><strong>Techvidya</strong> is our annual state level technical fest,it is festival organized to host events related to various technical aspects.It is a platform to showcase the practical talent in the field they've learnt.Each branch such as Electrical,civil,computer etc...
+         </p>
+          <div class="item button-knowmore" style="--bg-color: #9b59b6;">
+              <button class="w3-button w3-teal">Know more</button>
+            </p>
+        
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <div id="section3" data-aos="fade-down-right" class="page-header">
