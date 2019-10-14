@@ -128,6 +128,17 @@
     line-height: 1.1em;
  
     }
+    .nav{
+       color: black;
+  
+ 
+    font-family: Permanent Marker, sans-serif;
+    text-transform: uppercase;
+  
+
+    font-size:1vw;
+    
+    }
     .w3-jumb
     {
       color:black;
@@ -207,12 +218,13 @@ a {
 .header {
   
   opacity:0.9;
-  
+    background-color: #eee;
+  opacity:0.8;
   box-shadow: 1px 1px 4px 0 rgba(0,5,0,1);
   position: fixed;
   width: 100%;
   z-index: 3;
-  background:transparent;
+
 }
 
 .header ul {
@@ -220,8 +232,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  color: white;
- background:transparent;
+
 
 
 }
@@ -229,10 +240,12 @@ a {
 .header li a {
   display: block;
   padding: 20px 20px;
-    font-weight:900;
-    color:black;
+    font-weight:1000;
+    color:black
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
+    background-color: #eee;
+  opacity:0.7;
 }
 
 .header li a:hover,
@@ -245,9 +258,11 @@ a {
   float: left;
   font-size:0.8em;
   font-weight:800;
-  color:#eee;
+  color:black;
   padding:20px 20px;
   text-decoration: none;
+    background-color: #eee;
+  opacity:0.7;
 }
 
 /* menu */
@@ -256,7 +271,8 @@ a {
   clear: both;
   max-height:0;
   transition: max-height .2s ease-out;
-  background:transparent;
+  background-color: #eee;
+  opacity:0.7;
 
 }
 
@@ -315,9 +331,9 @@ a {
 .header .menu-btn:checked ~ .menu {
   max-height:500px;
   background-color:#eee;
-  color:black;
+  color:blue;
 
-  text-decoration-color:black;
+  
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -859,12 +875,33 @@ overflow: hidden;
 
 <div class="w3-row-padding w3-content w3-light-grey" style="max-width:1400px">
   <div class="w3-twothird w3-light-grey">
-    <img src="register2.jpg" alt="Notebook" style="width:100%">
-    <h2>Book your slots soon</h2>
-    <div class="w3-justify">
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <!-- <img src="register2.jpg" alt="Notebook" style="width:100%"> -->
+    <div class="w3-container">
  
+</div>
+
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides" src="CSE.png" style="width:100%;">
+  <img class="mySlides" src="cse2.png" style="width:100%;display:none;">
+  <img class="mySlides" src="ece.jpeg" style="width:100%;display:none">
+  <img class="mySlides" src="spotads.png" style="width:100%;display:none">
+
+  <div class="w3-row-padding w3-section">
+
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="cse2.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
     </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="ece.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="spotads.png" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+    </div>
+   
+  </div>
+
+</div>
+    
   </div>
   <div class="w3-third">
     <div class="w3-container w3-light-grey">
@@ -884,6 +921,29 @@ overflow: hidden;
               <li>I also have a degree in <strong>Aïkido</strong> from the <a href="https://web.facebook.com/Aikido-Zanshin-Dojo-Mahdia-198711670225680" target="_blank">ZanShin Dojo</a>.</li> <li>I have been pratising <strong>Yoga,Tai-Chi</strong> since thirteen years.</li> -->
    </ul>
 </section>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
 </body>
 
 <script type="text/javascript">
