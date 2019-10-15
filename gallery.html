@@ -2,12 +2,14 @@
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <link rel="shortcut icon" href="icon.ico">
 <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="jquery.min.js"></script>
 <style>
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
@@ -22,6 +24,45 @@ img {margin-bottom: -7px}
   z-index: 3;
   background:transparent;
 
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+position: absolute;
+left:48%;
+top: 48%;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ff6347;
+z-index: 999999;
 }
  h1
     {
@@ -178,7 +219,7 @@ img {margin-bottom: -7px}
 }
 
 </style>
-<body>
+
 
 <!-- Sidebar -->
 <!-- <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
@@ -192,6 +233,8 @@ img {margin-bottom: -7px}
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
   </div>
 </nav> -->
+
+
 <header class="header">
   <a href="" class="logo">
     Sai Vidya Institute Of Technology 
@@ -214,6 +257,8 @@ img {margin-bottom: -7px}
 
     </ul> 
 </header>
+<body>
+
 <br><br>
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
@@ -227,7 +272,9 @@ img {margin-bottom: -7px}
   <p><b>A tour to previous tech fests</b></p>
   
 </div>
-
+  <div class="spinner-wrapper">
+<div class="spinner"></div>
+</div>
 <!-- Photo Grid -->
 <div class="w3-row" id="myGrid" style="margin-bottom:128px">
   <div class="w3-third">
@@ -264,9 +311,22 @@ img {margin-bottom: -7px}
 
 <!-- Footer -->
 
-
+</header></div></div></body>
  
-<script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+$(window).on("load", function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+});
+
 // Toggle grid padding
 function myFunction() {
   var x = document.getElementById("myGrid");
@@ -286,7 +346,7 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
 </script>
 
-</body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -35,7 +35,47 @@
     /*NAVBAR*/
 
 /*navbar over*/
+/*LOAder*/
+.spinner {
+  width: 40px;
+  height: 40px;
+  background:transparent;
 
+position: absolute;
+left:48%;
+top: 48%;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background:transparent;
+z-index: 999999;
+}
+/*LOADER CLOSED*/
     * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
     *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
 
@@ -723,7 +763,7 @@ overflow: hidden;
     <li><a href="about.html">About</a></li>
 
     <li><a href="Events.html">Events</a>
-    <li><a href="#contact">Tech Gallery</a></li>
+    <li><a href="gallery.html">Tech Gallery</a></li>
     <li><a href="#contact">Conatct</a></li>
      
   
@@ -735,6 +775,9 @@ overflow: hidden;
 
     </ul> 
 </header>
+<div class="spinner-wrapper">
+<div class="spinner"></div>
+</div>
 <section class="fullsize-video-bg">
     <div class="inner">
         <div>
@@ -926,7 +969,19 @@ overflow: hidden;
    </ul>
 </section>
 
-<script>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+$(window).on("load", function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+});
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
