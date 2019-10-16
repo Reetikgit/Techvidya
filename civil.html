@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 <title>Events@Techvidya</title>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="jquery.min.js"></script>
  <link rel="shortcut icon" href="icon.ico">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-white.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
 <script src="jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <head>
@@ -423,32 +419,6 @@ div#all {
     display: none;
   }
 }
-.spinner {
-  width:50px;
-  height:50px;
-position: absolute;
-left:46%;
-top: 46%;
--webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-animation: sk-rotateplane 1.2s infinite ease-in-out;
-}
-
-@-webkit-keyframes sk-rotateplane {
-  0% { -webkit-transform: perspective(120px) }
-  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-  100% { -webkit-transform: perspective(120px) rotateY(360deg)  }
-}
-
-.spinner-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: black;
-opacity:0.9;
-z-index: 999999;
-}
 
 </style>
 <body>
@@ -463,9 +433,8 @@ z-index: 999999;
 
  <h2 ><a href="Events.html" class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Quick View</a>
     </h2>
-  
-  
- <h2> <a href="cseevent1.html" class="w3-bar-item w3-button" onclick="myAccordion('demo2')" href="javascript:void(0)">CSE/ISE</a></h2>
+
+   <h2> <a href="cseevent1.html" class="w3-bar-item w3-button" onclick="myAccordion('demo2')" href="javascript:void(0)">CSE/ISE</a></h2>
     
   <h2><a href="ece.html" class="w3-bar-item w3-button" onclick="myAccordion('demo3')" href="javascript:void(0)">ECE</a></h2>
     <h2><a href="mech.html" class="w3-bar-item w3-button" onclick="myAccordion('demo7')" href="javascript:void(0)">MECHANICAL</a>
@@ -483,12 +452,8 @@ z-index: 999999;
 
 
 </nav>
- <div class="spinner-wrapper">
-<div class="spinner">
- 
-  <img src="icon2.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
-</div>
-</div>
+
+
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:250px;">
@@ -499,7 +464,7 @@ z-index: 999999;
 </div>
 
 <header class="w3-container " style="padding:15px 10px">
-  <h1 class="w3-container ">EVENTS</h1>
+  <h1 class="w3-container ">CIVIL</h1>
 </header>
 
 <div class="w3-container" style="padding:32px">
@@ -509,82 +474,116 @@ z-index: 999999;
  <div class="w3-panel w3-padding-18 w3-card">
 
 
-<div id="all">
-  <div class="view view-first">
-    <img src="cs.jpg" />
-    <div class="mask">
-      <h2>CS/ISE</h2>
-      <p>Hit below to view the events of CSE/ISE.</p>
-      <a href="cseevent1.html" class="info">Events</a>
-    </div>
-    </div>
-     <div class="view view-first">
-    <img src="eee.jpg" />
-    <div class="mask">
-      <h2>EEE</h2>
-      <p>Hit below to view the events of EEE.</p>
-      <a href="eeeevent.html" class="info">Events</a>
-    </div>
-    </div>
-     <div class="view view-first">
-    <img src="mech.jpg" />
-    <div class="mask">
-      <h2>MECHANICAL</h2>
-      <p>Hit below to view the events of MECHANICAL.</p>
-      <a href="mech.html" class="info">Events</a>
-    </div>
+
+</div></div></div>
+ <div class="w3-container w3-padding-16 w3-card" >
+<h3 class="w3-center">THERMOCOL MODELLING</h3>
+<div class="w3-content" style="max-width:800px">
+<img src="tm.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a onclick="document.getElementById('id01').style.display='block'" target="_blank" class="w3-button w3-padding-large w3-teal" style="width:98.5%">Rules</a>
+  </div>
+  <div class="w3-col m6">
+    <a  href="registrationform.html" class="w3-button w3-padding-large w3-blue" style="width:98.5%">Register</a>
+  </div>
+</div>
+</div>
+</div>
+<div class="w3-container w3-padding-16 w3-card" >
+<h3 class="w3-center">TECHNICAL QUIZ</h3>
+<div class="w3-content" style="max-width:800px">
+<img src="tqcivil.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a  onclick="document.getElementById('id01').style.display='block'" target="_blank" class="w3-button w3-padding-large w3-teal" style="width:98.5%">Rules</a>
+  </div>
+  <div class="w3-col m6">
+    <a href="registrationform.html" class="w3-button w3-padding-large w3-blue" style="width:98.5%">Register</a>
+  </div>
+</div>
+</div>
+</div>
+<div class="w3-container w3-padding-16 w3-card" >
+<h3 class="w3-center">AUTO CADD</h3>
+<div class="w3-content" style="max-width:800px">
+<img src="autocadd.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a  onclick="document.getElementById('id01').style.display='block'" target="_blank" class="w3-button w3-padding-large w3-teal" style="width:98.5%">Rules</a>
+  </div>
+  <div class="w3-col m6">
+    <a href="registrationform.html" class="w3-button w3-padding-large w3-blue" style="width:98.5%">Register</a>
+  </div>
+</div>
+</div>
+</div>
+<div class="w3-container w3-padding-16 w3-card" >
+<h3 class="w3-center">PAPER PRESENTATION</h3>
+<div class="w3-content" style="max-width:800px">
+<img src=".png" style="width:100%;margin:20px 0" alt="no image"><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a  onclick="document.getElementById('id01').style.display='block'" target="_blank" class="w3-button w3-padding-large w3-teal" style="width:98.5%">Rules</a>
+  </div>
+  <div class="w3-col m6">
+    <a href="registrationform.html" class="w3-button w3-padding-large w3-blue" style="width:98.5%">Register</a>
+  </div>
+</div>
+</div>
+</div>
+
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+  
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+        <h3 style="width:30%" class="w3-circle w3-margin-top">Rules</h3>
+
+      </div>
+
+      <form class="w3-container" action="registrationform.html">
+        <div class="w3-section">
+          <p><li>Teams of 3 or 4 participants each.</li>
+
+            <li>Duration is 90 minutes.</li>
+
+            <li>The first clue will be given, students must follow the clues and reach the treasure which will be a part of the clues.</li>
+
+            <li>Use of mobile phones and computers is allowed. It is preferred that the participants have a smartphone with internet access and camera functionality.</li>
+
+            <li>The coordinators can be contacted in case of any issues.</li>
+
+            <li>The coordinators will not help regarding clues.</li>
+
+            <li>Tampering the physical clues hidden offline will lead to immediate disqualification from the event.</li> 
+             <strong>Registration Fee: 100/- per team
+             Venue: Room no. 135(CS & IS Block)
+             Time: 02:30 PM - 04:00 PM</strong></li>
+
+            <li><strong>Faculty Coordinator:
+            Nagashree C & sushma A (9886748720/7204464966)</li>
+
+            <li>Student Coordinator:
+            Prajwal - 9845431031</p></li></strong>
+          <button class="w3-button w3-block w3-teal w3-section w3-padding" type="submit">Register</button>
+          
+        </div>
+      </form>
+
+     
+
     </div>
   </div>
-   <div class="view view-first">
-    <img src="civil.jpg" />
-    <div class="mask">
-      <h2>CIVIL</h2>
-      <p>Hit below to view the events of CIVIL.</p>
-      <a href="civil.html" class="info">Events</a>
-    </div>
-    </div>
-     <div class="view view-first">
-    <img src="ec.jpg" />
-    <div class="mask">
-      <h2>ECE</h2>
-      <p>Hit below to view the events of ECE.</p>
-      <a href="ece.html" class="info">Events</a>
-    </div>
-    </div>
-     <div class="view view-first">
-    <img src="mba.jpg" />
-    <div class="mask">
-      <h2>MBA</h2>
-      <p>Hit below to view the events of MBA.</p>
-      <a href="mba.html" class="info">Events</a>
-    </div>
-    </div>
 </div>
-</div>
-</div>
-
-
-
-
 </div> 
 
 
      
 </div>
 
-
 <script>
-  $(document).ready(function() {
-
-$(window).on("load", function() {
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = $('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
-}
-hidePreloader();
-});
-});
 // Open and close the sidebar on medium and small screens
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
