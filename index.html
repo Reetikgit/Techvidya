@@ -37,42 +37,28 @@
 /*navbar over*/
 /*LOAder*/
 .spinner {
-  width:40px;
-  height:40px;
-  background-color:white;
-
+  width:50px;
+  height:50px;
 position: absolute;
-left:48%;
-top: 48%;
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
+left:46%;
+top: 46%;
+-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
 @-webkit-keyframes sk-rotateplane {
   0% { -webkit-transform: perspective(120px) }
   50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(360deg)  }
 }
 
-@keyframes sk-rotateplane {
-  0% { 
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-  } 50% { 
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-  } 100% { 
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
-}
 .spinner-wrapper {
 position: fixed;
 top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: #fe9942;
+background-color: black;
 opacity:0.9;
 z-index: 999999;
 }
@@ -754,7 +740,7 @@ overflow: hidden;
 </style>
 
 <header class="header">
-  <a href="" class="logo">
+  <a href="http://saividya.ac.in/" class="logo">
     Sai Vidya Institute Of Technology 
   </a>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -777,7 +763,9 @@ overflow: hidden;
     </ul> 
 </header>
 <div class="spinner-wrapper">
-<div class="spinner"></div>
+<div class="spinner">
+  <img src="icon2.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
+</div>
 </div>
 <section class="fullsize-video-bg">
     <div class="inner">

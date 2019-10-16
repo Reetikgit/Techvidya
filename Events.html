@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>Events@Techvidya</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jquery.min.js"></script>
  <link rel="shortcut icon" href="icon.ico">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <meta name="viewport" content="width=device-width, user-scalable=no" />
@@ -421,6 +423,32 @@ div#all {
     display: none;
   }
 }
+.spinner {
+  width:50px;
+  height:50px;
+position: absolute;
+left:46%;
+top: 46%;
+-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(360deg)  }
+}
+
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: black;
+opacity:0.9;
+z-index: 999999;
+}
 
 </style>
 <body>
@@ -455,7 +483,12 @@ div#all {
 
 
 </nav>
-
+ <div class="spinner-wrapper">
+<div class="spinner">
+ 
+  <img src="icon2.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
+</div>
+</div>
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:250px;">
@@ -553,6 +586,17 @@ div#all {
 </div>
 
 <script>
+  $(document).ready(function() {
+
+$(window).on("load", function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+});
 // Open and close the sidebar on medium and small screens
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";

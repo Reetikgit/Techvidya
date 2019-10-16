@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="icon.ico">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -13,12 +21,163 @@
   * {
   box-sizing: border-box;
 }
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  color: white;
+ background:transparent;
+
+  ;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+    font-weight:900;
+    color:black;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color:#eee;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size:0.8em;
+  font-weight:800;
+  color:black;
+  padding:20px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height:0;
+  transition: max-height .2s ease-out;
+  background:transparent;
+
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 30px 10px;
+  position: relative;
+  user-select: none;
+
+}
+
+.header .menu-icon .navicon {
+  background:#999;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width:24px;
+     background-color:gray;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #999;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+  
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+
+
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height:500px;
+  background-color:#eee;
+  color:black;
+
+  text-decoration-color:black;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+.header {
+  
+  opacity:0.9;
+  
+  box-shadow: 1px 1px 4px 0 rgba(0,5,0,1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background:transparent;
+
+}
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
 
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   color: bisque;
-  background-color: lightcyan;
+  background:url("event1.jpg");
+  height:200%;
 }
 
 form {
@@ -26,7 +185,7 @@ form {
   margin: 35px auto;
   border-radius: 10px;
   padding: 10px 15px;
- background:url("head1.jpg");
+ background:url("loader2.jpeg");
 }
 
 h1 {
@@ -127,6 +286,49 @@ button {
 }
 </style>
 <body>
+  <header class="header">
+  <a href="http://saividya.ac.in/" class="logo">
+    Sai Vidya Institute Of Technology 
+  </a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+
+    <li><a href="Events.html">Events</a></li> <li><a href="">Tech Gallery</a></li>
+    <li><a href="#contact">Conatct</a></li>
+  
+                 
+
+    </ul> 
+
+</header>
+ <br><br><br><br>
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-light-blue" style="max-width:600px">
+      <h2 style="color: red;"></h2>
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+        <h3 style="width:30%" class="w3-circle w3-margin-top">Confiramtion</h3>
+
+      </div>
+
+      <form class="w3-container" action="registrationform.html">
+        <div class="w3-section alert">
+          <p><li>You have successfully confirmed your slot for the event</li>
+
+            <li>Visit your nearer desk for the payment</li>
+
+          <button class="w3-button  w3-blue w3-section w3-padding" type="submit"><a href="Events.html">Register for another event</button></a> <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit"><a href="index.html">Home</button></a>
+          
+        </div>
+      </form>
+
+     
+
+    </div>
+  </div>
   <form action="" method="POST" id="registrationform">
     <h2>TechVidya(Register)</h2>
     <div class="alert">Registration Successfull</div>
@@ -144,18 +346,26 @@ button {
       <label class="" for="name">USN:</label>
       <input type="text" name="usn" value="" id="usn" required />
 
-
-      <label for="password">Password:</label>
-      <input type="password" name="password" value="" id="password" required />
+          <label class="" for="bio">Phone:</label>
+      <input type="text" name="bio" value="" id="bio" required />
+      
     </fieldset>
 
     <fieldset>
       <!-- section 2 -->
-      <legend><span class="section">2</span>Profile</legend>
+      <legend><span class="section">2</span>Select Event</legend>
 
-      <label class="" for="bio">Phone:</label>
-      <input type="text" name="bio" value="" id="bio" required />
-
+    
+        <label for="password">Confirm Event</label>
+      <select name="Select" value="" id="Event" required />
+      <optgroup label="Select">
+          <option value="Cryptohunt" id="frontend">Cryptohunt</option>
+          <option value="SearchIt" id="backend">SearchIt</option>
+          <option value="Webathon" id="fullstack">Webathon</option>
+          <option value="AppDev" id="android">AppDev</option>
+          <option value="Competitive Coding" id="ionic">Competitive Coding</option>
+          <option value="CTF" id="phonegap">CTF</option>
+        </optgroup></select>
       <label for="job">Branch:</label>
       <select name="job" id="branch" required>
         <optgroup label="Select">
@@ -178,12 +388,15 @@ button {
       </select>
 
 
-      <button type="submit" sendMessage()>Register</button>
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large "type="submit" sendMessage()>Register</button>
          
   </form>
+   </fieldset>
 
+  </form></body>
   <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
   <script type="text/javascript">
+
   
   var firebaseConfig = {
     apiKey: "AIzaSyB_5vqcnQ7sD2AsHeBRl2QB6GifZmp8jGM",
@@ -215,13 +428,13 @@ function formSubmit(e) {
   let name = document.querySelector('#name').value;
   let usn = document.querySelector('#usn').value;
   let email = document.querySelector('#email').value;
-  let password = document.querySelector('#password').value;
+  let Event = document.querySelector('#Event').value;
   let bio = document.querySelector('#bio').value;
   let branch = document.querySelector('#branch').value;
   let sem = document.querySelector('#sem').value;
 
   //send message values
-  sendMessage(name,usn, email, password, bio, branch, sem);
+  sendMessage(name,usn, email, Event, bio, branch, sem);
 
   //Show Alert Message(5)
   document.querySelector('.alert').style.display = 'block';
@@ -229,7 +442,7 @@ function formSubmit(e) {
   //Hide Alert Message After Seven Seconds(6)
   setTimeout(function() {
     document.querySelector('.alert').style.display = 'none';
-  }, 7000);
+  }, 9999999);
 
   //Form Reset After Submission(7)
   document.getElementById('registrationform').reset();
@@ -237,19 +450,21 @@ function formSubmit(e) {
 
 //Send Message to Firebase(4)
 
-function sendMessage(name, usn, email, password, bio, branch, sem) {
+function sendMessage(name, usn, email, Event, bio, branch, sem) {
   let newFormMessage = formMessage.push();
   newFormMessage.set({
     name: name,
     usn: usn,
     email: email,
-    password: password,
+    Event: Event,
     ph: bio,
     branch: branch,
     sem: sem
   });
+
 }
 </script>
+
 <!--   <script src="app.js"></script> -->
 </body>
 
