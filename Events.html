@@ -483,12 +483,7 @@ z-index: 999999;
 
 
 </nav>
- <div class="spinner-wrapper">
-<div class="spinner">
- 
-  <img src="icon2.png" style="width:100%;margin:20px 0" alt="Blog Template"><br>
-</div>
-</div>
+
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:250px;">
@@ -574,17 +569,7 @@ z-index: 999999;
 
 
 <script>
-  $(document).ready(function() {
 
-$(window).on("load", function() {
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = $('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
-}
-hidePreloader();
-});
-});
 // Open and close the sidebar on medium and small screens
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
