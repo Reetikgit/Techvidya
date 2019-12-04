@@ -14,12 +14,12 @@
 <form class="w3-container w3-card-4" id="loginform">
 
 <p>
-<input class="w3-input" type="text" style="width:90%" id="name" required>
-<label>Name</label></p>
+<input class="w3-input" type="text" style="width:90%" id="usn" required>
+<label>USN</label></p>
 
 <p>
-<input class="w3-input" type="email" style="width:90%" id="email" required>
-<label>Email</label></p>
+<input class="w3-input" type="password" style="width:90%" id="pass" required>
+<label>Password</label></p>
 
 <p>
 <input class="w3-radio" type="radio" name="gender" value="male" checked>
@@ -105,12 +105,12 @@ document
 function formSubmit(e) {
  
   e.preventDefault();
-   var name = document.querySelector('#name').value;
-   console.log(name);
-  let email = document.querySelector('#email').value;
+   var usnD = document.querySelector('#usn').value;
+   console.log(usn);
+  let pass = document.querySelector('#pass').value;
  
   // Get Values from the DOM
-   database=firebase.database();
+  database=firebase.database();
   var ref=database.ref('Signup');
   ref.on('value',gotData,errData);
    var initials;
@@ -125,21 +125,19 @@ function formSubmit(e) {
     for(var i=0;i<keys.length;i++)
     {
       var k=keys[i];
-      initials=sc[k].name;
-      var emails=sc[k].email;
+      initials=sc[k].usn;
+      var password=sc[k].pass;
+  
      
-      var li=initials[5]+':: '+emails;
-       if(initials==name &&emails==email)
+       if(initials==usnD &&password==pass)
 		{
 		alert("Login Successfull")
-		
-		// window.open('registrationform.html')
-		// window.close('login.html')
+
 		count++;
 		break;
 		}
-	
 
+		
 
     }
     if(count==0)

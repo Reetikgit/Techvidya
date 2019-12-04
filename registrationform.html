@@ -446,49 +446,20 @@ button {
 //Reference for form collection(3)
 // let formMessage = firebase.database().ref('register');
 let formMessage2 = firebase.database().ref('Signup');
- // database=firebase.database();
- //  var ref=database.ref('Login');
- //  ref.on('value',gotData,errData);
- //  function gotData(data)
- //  {
- //    console.log(data.val());
- //    var sc=data.val();
- //    var keys=Object.keys(sc);
- //   // console.log(keys);
- //    for(var i=0;i<keys.length;i++)
- //    {
- //      var k=keys[i];
- //      var initials=sc[k].name;
- //      var emails=sc[k].email;
- //      //console.log(initials,emails);
- //      var li=initials[5]+':: '+emails;
 
- //    }
- //     //datadisplay.append(li);
- //          // datadisplay.append(li);
-    
- //        //datadisplay.append("Error");   
-   
- //  }
-  // function errData(err)
-  // {
-  //   console.log('error');
-  //   console.log(err);
-  // }
-
-//listen for submit event//(1)
 document
   .getElementById('registrationform')
   .addEventListener('submit', formSubmit);
 
 //Submit form(1.2)
-function formSubmit(e) {
+function formSubmit(e) 
+{
  
   e.preventDefault();
   // Get Values from the DOM
 
   let name = document.querySelector('#name').value;
-  let usn = document.querySelector('#usn').value;
+  var usn = document.querySelector('#usn').value;
   let email = document.querySelector('#email').value;
   // let Event = document.querySelector('#Event').value;
   let bio = document.querySelector('#bio').value;
@@ -498,24 +469,88 @@ function formSubmit(e) {
   // let sem = document.querySelector('#sem').value;
 
   //send message values
-  if(Confirmpass==pass)
-  {
-    sendMessage(name,usn,email,bio,pass);
-    alert("SignUp Successfull")
-    document.getElementById('registrationform').reset();
-    window.location = "Login.html"
 
-  }
-  else
-  {
-    alert("Password Mismatch");
-  }
-  //Show Alert Message(5)
-   
-}
+  /*Fetching data*/
+  //sendMessage(name,usn,email,bio,pass);
+  database=firebase.database();
+  var ref=database.ref('Signup');
+  ref.on('value',gotData,errData);
+   var initials;
+   var count;
+   var match=0,usnD,keys,sc;
 
-//Send Message to Firebase(4)
+       
   
+  function gotData(data)
+  {
+    
+    
+     sc=data.val();
+     keys=Object.keys(sc);
+     console.log(data.val());
+    console.log(keys);
+   }
+    
+    for(var i=0;i<keys.length;i++)
+    {
+      match=0;
+      var k=keys[i];
+      initials=sc[k].name;
+      var emails=sc[k].email;
+      usnD=sc[k].usn;
+      if(usnD==usn)
+      {
+          match++;
+          break;
+      }
+    }
+
+     //datadisplay.append(li);
+
+     if(match==0)
+     {
+        if(Confirmpass==pass)
+        {
+        
+        
+        sendMessage(name,usn,email,bio,pass);
+        alert("SignUp Successfull")
+        document.getElementById('registrationform').reset();
+        window.location = "Login.html"
+
+        
+        }
+        else
+        {
+            alert("Password Mismatch");
+        }
+
+      } 
+        
+     
+     
+      else
+        {
+          alert("Usn already Exsits")
+
+        }   
+
+     
+  
+    
+  
+  function errData(err)
+  {
+    console.log('error');
+    console.log(err);
+  }
+
+  
+ }
+ 
+  //Show Alert Message(5)
+  
+//Send Message to Firebase(4)  
 function sendMessage(name, usn, email, bio,pass) {
     
   let newFormMessage = formMessage2.push();
