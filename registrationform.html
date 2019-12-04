@@ -477,18 +477,16 @@ function formSubmit(e)
   ref.on('value',gotData,errData);
    var initials;
    var count;
-   var match=0,usnD,keys,sc;
-
-       
-  
+   var match=0,usnD,sc;
+   var keys=0;
+    
   function gotData(data)
   {
     
     
      sc=data.val();
      keys=Object.keys(sc);
-     console.log(data.val());
-    console.log(keys);
+     
    }
     
     for(var i=0;i<keys.length;i++)
@@ -513,7 +511,7 @@ function formSubmit(e)
         {
         
         
-        sendMessage(name,usn,email,bio,pass);
+        sendMessage(name,usn.toUpperCase(),email,bio,pass);
         alert("SignUp Successfull")
         document.getElementById('registrationform').reset();
         window.location = "Login.html"

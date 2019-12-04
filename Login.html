@@ -114,22 +114,24 @@ function formSubmit(e) {
   var ref=database.ref('Signup');
   ref.on('value',gotData,errData);
    var initials;
-   var count;
+   var count,sc,keys;
   function gotData(data)
   {
     //console.log(data.val());
-    var sc=data.val();
-    var keys=Object.keys(sc);
+     sc=data.val();
+  	keys=Object.keys(sc);
+   }
    // console.log(keys);
-   count=0;
+  
     for(var i=0;i<keys.length;i++)
     {
+       count=0;
       var k=keys[i];
       initials=sc[k].usn;
       var password=sc[k].pass;
   
      
-       if(initials==usnD &&password==pass)
+       if(initials==usnD.toUpperCase() &&password==pass)
 		{
 		alert("Login Successfull")
 
@@ -147,7 +149,7 @@ function formSubmit(e) {
     // console.log(initials[5],emails);
      //datadisplay.append(li);
  	
-   }
+   
   
   function errData(err)
   {
