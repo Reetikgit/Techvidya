@@ -356,8 +356,8 @@ button {
       <label class="" for="name">USN:</label>
       <input type="text" name="usn" value="" id="usn" required />
 
-          <label class="" for="bio">Phone:</label>
-      <input type="text" name="bio" value="" id="bio" required />
+          <label class="" for="phn">Phone:</label>
+      <input type="text" name="bio" value="" id="phn" required />
       <label class="" for="pass">Passowrd:</label>
       <input type="password" name="pass" value="" id="pass" required />
       <label class="" for="Confirmpass">Confirm Passowrd:</label>
@@ -452,6 +452,28 @@ document
   .addEventListener('submit', formSubmit);
 
 //Submit form(1.2)
+database=firebase.database();
+  var ref=database.ref('Signup');
+ // var keys;
+  ref.on('value',gotData,errData);
+   var initials;
+   var count;
+   var match=0,usnD,sc;
+ 
+    var keys;
+  function gotData(data)
+  {
+    
+    
+     sc=data.val();
+     keys=Object.keys(sc);
+     
+   }
+    function errData(err)
+  {
+    console.log('error');
+    console.log(err);
+  }
 function formSubmit(e) 
 {
  
@@ -462,33 +484,14 @@ function formSubmit(e)
   var usn = document.querySelector('#usn').value;
   let email = document.querySelector('#email').value;
   // let Event = document.querySelector('#Event').value;
-  let bio = document.querySelector('#bio').value;
+  let phn = document.querySelector('#phn').value;
   var pass = document.querySelector('#pass').value;
   var Confirmpass = document.querySelector('#Confirmpass').value;
-  // let branch = document.querySelector('#branch').value;
-  // let sem = document.querySelector('#sem').value;
 
-  //send message values
+  
+  usnmatch=usn.toUpperCase();
+  /*Fetching the elements from each object*/
 
-  /*Fetching data*/
-  //sendMessage(name,usn,email,bio,pass);
-  database=firebase.database();
-  var ref=database.ref('Signup');
-  ref.on('value',gotData,errData);
-   var initials;
-   var count;
-   var match=0,usnD,sc;
-   var keys=0;
-    
-  function gotData(data)
-  {
-    
-    
-     sc=data.val();
-     keys=Object.keys(sc);
-     
-   }
-    
     for(var i=0;i<keys.length;i++)
     {
       match=0;
@@ -496,78 +499,65 @@ function formSubmit(e)
       initials=sc[k].name;
       var emails=sc[k].email;
       usnD=sc[k].usn;
-      if(usnD==usn)
+
+      if(usnD==usnmatch)
       {
           match++;
+          keyss=0;
           break;
       }
     }
 
      //datadisplay.append(li);
-
-     if(match==0)
-     {
-        if(Confirmpass==pass)
-        {
-        
-        
-        sendMessage(name,usn.toUpperCase(),email,bio,pass);
-        alert("SignUp Successfull")
-        document.getElementById('registrationform').reset();
-        window.location = "Login.html"
-
-        
-        }
-        else
-        {
-            alert("Password Mismatch");
-        }
-
-      } 
-        
-     
-     
-      else
-        {
-          alert("Usn already Exsits")
-
-        }   
-
-     
-  
+    var usnvalid="1va1";
     
-  
-  function errData(err)
-  {
-    console.log('error');
-    console.log(err);
-  }
+    if(match==0)
+    {
+      if(usn.includes("1va1")||usn.includes("1VA1")||usn.includes("1Va1")||usn.includes("1vA1"))
+      {
+         
+          if(Confirmpass==pass)
+          {
+            sendMessage(name,usn.toUpperCase(),email,phn,pass);
+            alert("SignUp Successfull")
+            document.getElementById('registrationform').reset();
+            window.location = "Login.html"        
+          }
+          else
+          {
+            alert("Password Mismatch");
+          }
+      }
+      else
+      {
+         alert("Please enter a valid USN")
+      }
+    } 
+    else
+    {
+        alert("Usn already exsits")
 
+    }
   
  }
  
   //Show Alert Message(5)
   
 //Send Message to Firebase(4)  
-function sendMessage(name, usn, email, bio,pass) {
+function sendMessage(name, usn, email, phn,pass) {
     
-  let newFormMessage = formMessage2.push();
-  newFormMessage.set({
+    let newFormMessage = formMessage2.push();
+    newFormMessage.set({
     name: name,
     usn: usn,
     email: email,
     
-    ph: bio,
+    ph:phn,
     pass:pass
-    
     
   });
 }
   
-
-
-
-
 </script>
 
 <!--   <script src="app.js"></script> -->
