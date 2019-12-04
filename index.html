@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-<meta name="viewport" content="width=device-width, user-scalable=no" />
-<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-
-<!-- <script type="text/javascript" src="engine1/jquery.js"></script> -->
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
-<script src="jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-
-  
-    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
-  
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
+  <script src="jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <title>
     SVIT-TechVidya
@@ -32,10 +25,6 @@
 
 <body>
 <style type="text/css">
-    /*NAVBAR*/
-
-/*navbar over*/
-/*LOAder*/
 .spinner {
   width:50px;
   height:50px;
@@ -85,7 +74,7 @@ z-index: 999999;
   }
 }
 
-    #video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+  #video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
     video {    display: block; width: 100%; height: auto; 
                position:absolute;
                top:50%;
@@ -119,23 +108,27 @@ z-index: 999999;
               background: url(../images/clouds.jpg) no-repeat;
               background-size: cover;
           }
-    .fullsize-video-bg { height: 100%; overflow: hidden; }
+  .fullsize-video-bg { height: 100%; overflow: hidden; }
 
-    .fullsize-video-bg:before { content: ""; background: rgba(114,45,0,.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+  .fullsize-video-bg:before { content: ""; background: rgba(114,45,0,.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
     
 
 
-    .fullsize-video-bg .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
-    .fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
-    .fullsize-video-bg2 { height: 100%; overflow: hidden; }
+  .fullsize-video-bg .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
+  .fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
+  .fullsize-video-bg2 { height: 100%; overflow: hidden; }
 
-    .fullsize-video-bg2:before { content: "";  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-    .fullsize-video-bg:after {
-     content: ""; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC); background-size: 3px 3px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; 
+  .fullsize-video-bg2:before { content: "";  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+  .fullsize-video-bg:after {
+     content: ""; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC);
+      background-size: 3px 3px; 
+      position: absolute; top: 0; 
+      left: 0; width: 100%; height: 100%;
+       z-index: 1; 
     }
 
 
-    .fullsize-video-bg2 .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
+    .fullsize-video-bg2 .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position:relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
     .fullsize-video-bg2 .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
     h1
     {
@@ -182,7 +175,7 @@ z-index: 999999;
 
     }
     #section4{
-      background-color:white;
+      background-color:black;
 
       }
     @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -191,14 +184,10 @@ z-index: 999999;
   color:black;
   font-weight:1000;
   text-align:left;
- 
   font-family: "Permanent Marker";
    font-size: 24px; font-style:normal;
-
-  
   overflow: hidden;
   font-size:5vw;
- 
  
     }
     h3
@@ -231,32 +220,30 @@ z-index: 999999;
     }
     
 
-a {
-  color: #000;
-}
+  a {
+    color: #000;
+    }
 
 /* header */
 
 .header {
   
   opacity:0.9;
-    background-color: #eee;
+  background-color: #eee;
   opacity:0.8;
   box-shadow: 1px 1px 4px 0 rgba(0,5,0,1);
   position: fixed;
   width: 100%;
   z-index: 3;
 
-}
+  }
 
-.header ul {
+.header ul
+ {
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
-
-
-
 }
 
 .header li a {
@@ -271,14 +258,16 @@ a {
 }
 
 .header li a:hover,
-.header .menu-btn:hover {
+.header .menu-btn:hover 
+{
   background-color:cyan;
 }
 
-.header .logo {
+.header .logo 
+{
   display: block;
   float: left;
-  font-size:0.8em;
+  font-size:1em;
   font-weight:800;
   color:black;
   padding:20px 20px;
@@ -374,8 +363,6 @@ a {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-
-/* 48em = 768px */
 
 @media (min-width: 48em) {
   .header li {
@@ -690,8 +677,6 @@ p {
 .container-fluid
 {
  
-/*background-image:url("head4.jpg");*/
-  /*background: url("head4.jpg") no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -700,7 +685,6 @@ overflow: hidden;
 }
 .cntvideo video{
 
- /* -webkit-filter: blur(1px);*/
   width: 100%;
     height: 100%;
    
@@ -729,7 +713,8 @@ overflow: hidden;
 
 
 
-.menu {
+.menu 
+{
   display: none;
 }
 </style>
@@ -772,11 +757,8 @@ overflow: hidden;
       <marquee scrollamount="12"><span>Register Online</span><span> Click here</span></marquee>
     </button></div></a>
         <p>18th October</p>
-
-     
         </div>
     </div>
-
     <div id="video-viewport">
         <video width="1920" height="1280" autoplay muted loop>
             <source src="q.mp4" type="video/mp4" />
@@ -787,30 +769,7 @@ overflow: hidden;
 <section class="section2">
 <div id="section2" data-aos="fade-down-right" class="page-header">
   <h1 class="about">About</h1>
-   <!--  <div class="row">
 
-      <div class="col-xs-8 col-xs-offset-2 content">
-      
-       
-         
-        <div class="w3-row-padding">
-    <div class="w3-col s4">
-      <img src="icon2.png" style="width:100%">
-    </div>
-            <p class="smallp"><strong>Techvidya</strong> is our annual state level technical fest,it is festival organized to host events related to various technical aspects.It is a platform to showcase the practical talent in the field they've learnt.Each branch such as Electrical,civil,computer etc...
-         </p>
-          <div class="item button-knowmore" style="--bg-color: #9b59b6;">
-              <button class="w3-button w3-teal">Know more</button>
-            </p>
-        
-            <ul>
-         
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
- </div> -->
 <div class="w3-container w3-padding-16 w3-card" style="">
 <h3 class="w3-center"></h3>
 <div class="w3-content" style="max-width:800px">
@@ -828,72 +787,7 @@ overflow: hidden;
 </div>
 </div>
 </section>
-<!-- 
-<div id="section3" data-aos="fade-down-right" class="page-header">
-  <h1 class="about">Register</h1>
 
-<div class="w3-display-container w3-container">
-    <img src="poster1.jpeg" alt="Jeans" style="width:100%">
-    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
-      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
-      <h1 class="w3-hide-small">COLLECTION 2016</h1>
-      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
-    </div>
-  </div>
-
-  <div class="w3-container w3-text-grey" id="jeans">
-    <p>8 items</p>
-  </div>
-
-  <!-- Product grid 
-  <div class="w3-row w3-grayscale">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="head1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="head2.jpg" style="width:100%">
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="/w3images/jeans2.jpg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">New</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="/w3images/jeans4.jpg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Sale</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
-      </div>
-    </div>
- -->
-        <!--  <img class="img-responsive img-center" src="poster1.jpeg"></img> -->
          
 </div></section>
 <section class="section4">
@@ -901,7 +795,7 @@ overflow: hidden;
   <h1 class="w3-jumb">Register</h1>
 </div>
 
-<div class="w3-row-padding w3-content w3-light-grey" style="max-width:1400px">
+<div class="w3-row-padding w3-content w3-black" style="max-width:1400px">
   <div class="w3-twothird w3-light-grey">
     <!-- <img src="register2.jpg" alt="Notebook" style="width:100%"> -->
     <div class="w3-container">
@@ -942,16 +836,11 @@ overflow: hidden;
      </a>
     </div>
     <br>
-    
     <br>
-    
   </div>
 </div>
-            </p>
-        
-            <ul>
-          <!--    <li>I played <strong>football(soccer)</strong> in <a href="http://www.eshs.tn/acceuil.php" target="_blank">ESHS</a>.</li>
-              <li>I also have a degree in <strong>Aïkido</strong> from the <a href="https://web.facebook.com/Aikido-Zanshin-Dojo-Mahdia-198711670225680" target="_blank">ZanShin Dojo</a>.</li> <li>I have been pratising <strong>Yoga,Tai-Chi</strong> since thirteen years.</li> -->
+  </p> 
+    <ul>  
    </ul>
 </section>
  <footer id="contact" class="w3-center w3-black w3-padding-64">

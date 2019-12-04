@@ -15,7 +15,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="style.css" />
+<!--   <link rel="stylesheet" href="style.css" /> -->
   <title>Registration Form</title>
 </head>
 
@@ -307,6 +307,14 @@ button {
 
 </header>
  <br><br><br><br>
+<p>
+
+ <ol id="datadisplay">
+
+
+
+ </ol>
+</p>
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-light-blue" style="max-width:600px">
       <h2 style="color: red;"></h2>
@@ -350,11 +358,15 @@ button {
 
           <label class="" for="bio">Phone:</label>
       <input type="text" name="bio" value="" id="bio" required />
+      <label class="" for="pass">Passowrd:</label>
+      <input type="password" name="pass" value="" id="pass" required />
+      <label class="" for="Confirmpass">Confirm Passowrd:</label>
+      <input type="password" name="Confirmpass" value="" id="Confirmpass" required />
       
     </fieldset>
 
-    <fieldset>
-      <!-- section 2 -->
+    <!-- <fieldset>
+
       <legend><span class="section">2</span>Select Event</legend>
 
     
@@ -379,18 +391,18 @@ button {
           <option value="MBA" id="phonegap">MBA</option>
         </optgroup>
       </select>
-      <br /><br />
-      <label>Semester:</label>
+      <br /><br /> -->
+     <!--  <label>Semester:</label>
 
       <select id="sem" required>
         <option value="1">1</option>
         <option value="3">3</option>
         <option value="5">5</option>
          <option value="7">7</option>
-      </select>
+      </select> -->
 
 
-      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large "type="submit" sendMessage()>Register</button>
+      <button  class="w3-button w3-green w3-large "type="submit" sendMessage()>Register</button>
          
   </form>
    </fieldset>
@@ -426,13 +438,43 @@ button {
     messagingSenderId: "172917494368",
     appId: "1:172917494368:web:1cc301177c4f4fd6a46905",
     measurementId: "G-N5BDJDDC63"
+
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-
+  
 //Reference for form collection(3)
-let formMessage = firebase.database().ref('register');
+// let formMessage = firebase.database().ref('register');
+let formMessage2 = firebase.database().ref('Signup');
+ // database=firebase.database();
+ //  var ref=database.ref('Login');
+ //  ref.on('value',gotData,errData);
+ //  function gotData(data)
+ //  {
+ //    console.log(data.val());
+ //    var sc=data.val();
+ //    var keys=Object.keys(sc);
+ //   // console.log(keys);
+ //    for(var i=0;i<keys.length;i++)
+ //    {
+ //      var k=keys[i];
+ //      var initials=sc[k].name;
+ //      var emails=sc[k].email;
+ //      //console.log(initials,emails);
+ //      var li=initials[5]+':: '+emails;
+
+ //    }
+ //     //datadisplay.append(li);
+ //          // datadisplay.append(li);
+    
+ //        //datadisplay.append("Error");   
+   
+ //  }
+  // function errData(err)
+  // {
+  //   console.log('error');
+  //   console.log(err);
+  // }
 
 //listen for submit event//(1)
 document
@@ -441,47 +483,58 @@ document
 
 //Submit form(1.2)
 function formSubmit(e) {
+ 
   e.preventDefault();
   // Get Values from the DOM
 
   let name = document.querySelector('#name').value;
   let usn = document.querySelector('#usn').value;
   let email = document.querySelector('#email').value;
-  let Event = document.querySelector('#Event').value;
+  // let Event = document.querySelector('#Event').value;
   let bio = document.querySelector('#bio').value;
-  let branch = document.querySelector('#branch').value;
-  let sem = document.querySelector('#sem').value;
+  var pass = document.querySelector('#pass').value;
+  var Confirmpass = document.querySelector('#Confirmpass').value;
+  // let branch = document.querySelector('#branch').value;
+  // let sem = document.querySelector('#sem').value;
 
   //send message values
-  sendMessage(name,usn, email, Event, bio, branch, sem);
+  if(Confirmpass==pass)
+  {
+    sendMessage(name,usn,email,bio,pass);
+    alert("SignUp Successfull")
+    document.getElementById('registrationform').reset();
+    window.location = "Login.html"
 
+  }
+  else
+  {
+    alert("Password Mismatch");
+  }
   //Show Alert Message(5)
-  document.querySelector('.alert').style.display = 'block';
-
-  //Hide Alert Message After Seven Seconds(6)
-  setTimeout(function() {
-    document.querySelector('.alert').style.display = 'none';
-  }, 9999999);
-
-  //Form Reset After Submission(7)
-  document.getElementById('registrationform').reset();
+   
 }
 
 //Send Message to Firebase(4)
-
-function sendMessage(name, usn, email, Event, bio, branch, sem) {
-  let newFormMessage = formMessage.push();
+  
+function sendMessage(name, usn, email, bio,pass) {
+    
+  let newFormMessage = formMessage2.push();
   newFormMessage.set({
     name: name,
     usn: usn,
     email: email,
-    Event: Event,
+    
     ph: bio,
-    branch: branch,
-    sem: sem
+    pass:pass
+    
+    
   });
-
 }
+  
+
+
+
+
 </script>
 
 <!--   <script src="app.js"></script> -->
